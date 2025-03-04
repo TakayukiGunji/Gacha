@@ -7,7 +7,7 @@ if (!is_dir($save_dir)) {
 }
 
 $start = 0;
-$end = 620;
+$end = 800;
 
 for ($i = $start; $i <= $end; $i++) {
     $image_url = "https://img.gamewith.jp/article_tools/pokemon-tcg-pocket/gacha/m$i.png";
