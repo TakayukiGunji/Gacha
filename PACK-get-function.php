@@ -3,12 +3,6 @@
 $min = 1;
 $max = 723;
 
-// $pack_1 = rand ( $min, $max);
-// $pack_2 = rand ( 1, 723);
-// $pack_3 = rand ( 1, 723);
-// $pack_4 = rand ( 1, 723);
-// $pack_5 = rand ( 1, 723);
-
 $card = [ ];
 
 while ( count ( $card ) < 5 ) {
@@ -17,7 +11,15 @@ while ( count ( $card ) < 5 ) {
         $card [ ] = $num;
     }
 }
- ?>
+function get ( $card ) {
+    for ( $card = 0; $card <= 4; $card++ ) {
+?>
+        <img src="images/m<?= $card [ $this -> $card ] ?>.png" alt="',$card,'枚目">
+<?php
+    }
+}
+?>
+
  
 <img src="images/m<?= $card [ 0 ] ?>.png" alt="1枚目">
 <img src="images/m<?= $card [ 1 ] ?>.png" alt="2枚目">
