@@ -1,4 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
 <?php
+
+// 20250310
 
 $min = 1;
 $max = 723;
@@ -11,23 +21,16 @@ while ( count ( $card ) < 5 ) {
         $card [ ] = $num;
     }
 }
-function get ( $card ) {
-    for ( $card = 0; $card <= 4; $card++ ) {
+
+for ( $number = 0; $number <= 4; $number++ ) {
 ?>
-        <img src="images/m<?= $card [ $this -> $card ] ?>.png" alt="',$card,'枚目">
+    <img src="images/m<?= $card [ $number ] ?>.png" alt="<?= $number ?>枚目">
 <?php
-    }
 }
 ?>
 
- 
-<img src="images/m<?= $card [ 0 ] ?>.png" alt="1枚目">
-<img src="images/m<?= $card [ 1 ] ?>.png" alt="2枚目">
-<img src="images/m<?= $card [ 2 ] ?>.png" alt="3枚目">
-<img src="images/m<?= $card [ 3 ] ?>.png" alt="4枚目">
-<img src="images/m<?= $card [ 4 ] ?>.png" alt="5枚目">
-
-<form action="PACK-get.php" method='post'>
-    <input type="submit" name="submit" value="欲張ってもうパックを引く！">
+<form action="PACK-get-function.php" method='post'>
+    <a href="PACK-get-function.php" class="button"><span>+ 1 PACK</span></a>
 </form>
 
+    <a href="PACK-open-function.php" class="roop"><span>TOP</span></a>
