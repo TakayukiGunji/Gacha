@@ -13,7 +13,7 @@ a.button {
     padding: 3px;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(145deg, white, pink, black, orange, white);
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
     border: 0;
     border-radius: 10px;
     color: white;
@@ -35,7 +35,7 @@ a.button:hover {
 }
 
 a.button span {
-    background: #000;
+    background: black;
     padding: 1rem 4rem;
     border-radius: 6px;
     width: 100%;
@@ -79,7 +79,7 @@ a.roop:hover {
 }
 
 a.roop span {
-    background: #fff;
+    background: white;
     padding: 1rem 4rem;
     border-radius: 6px;
     width: 100%;
