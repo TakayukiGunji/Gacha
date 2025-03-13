@@ -1,38 +1,92 @@
 @charset "utf-8";
 
 body {
-    background: -webkit-linear-gradient(left, #BDBFBA 4%, #5A5C5B 98%),
-        -webkit-linear-gradient(16deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
-    background: linear-gradient(90deg, #BDBFBA 4%, #5A5C5B 98%),
-        linear-gradient(74deg, rgba(255, 255, 255, 0.5) 54%, rgba(0, 0, 0, 0.5) 100%);
-    background-blend-mode: multiply;
+    background: #EBEBE9;
+    background-image: -webkit-linear-gradient(160deg, rgba(255, 255, 255, 0.35) 3%, rgba(0, 0, 0, 0.35) 100%), -webkit-radial-gradient(101% 97%, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 98%);
+    background-image: linear-gradient(-70deg, rgba(255, 255, 255, 0.35) 3%, rgba(0, 0, 0, 0.35) 100%), radial-gradient(101% 97%, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 98%);
+    background-blend-mode: normal,normal,lighten;
     background-size: 2000px 1000px;
 }
 
 body section#main {
-    margin: 100px auto 0 auto;
+    margin: 20px auto 0 auto;
     height: 550px;
-    width: 1000px;
     /* border: solid 1px; */
 }
 
-body h1 {
+#kyomu h1 {
     text-align: center;
     /* font-weight: bold; */
-    font-size: 30px;
+    font-size: 40px;
+}
+
+#kyomu span {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* パックの画像 */
+
+#pack_img {
+    display: flex;
+}
+
+#pika_pack, #riz_pack, #myu2_pack, #myu_pack, #dia_pack, #pal_pack, #al_pack {
+    margin-left: 25px;
+}
+
+#pika_pack img, #riz_pack img, #myu2_pack img, #myu_pack img, #dia_pack img, #pal_pack img, #al_pack img {
+    width: 180px;
+}
+
+#pika_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#riz_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#myu2_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#myu_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#dia_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#pal_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#al_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
 }
 
 /* 「1 PACK」ボタン */
 
 a.button {
-    margin: 20px auto auto auto;
-    max-width: 253px;
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
     padding: 3px;
     align-items: center;
     text-align: center;
     background-image: linear-gradient(145deg, white, silver, black, gold, white);
     border: 0;
-    border-radius: 10px;
+    border-radius: 40px;
     color: white;
     font-weight: bold;
     display: flex;
@@ -46,16 +100,15 @@ a.button {
     transition: all .3s;
 }
 
-a.button:active,
-a.button:hover {
+a.button:active, a.button:hover {
     outline: 0;
 }
 
 a.button span {
     background: black;
     padding: 1rem 4rem;
-    border-radius: 6px;
-    max-width: 100%;
+    border-radius: 35px;
+    width: 41px;
     height: 100%;
     transition: 300ms;
 }
@@ -65,18 +118,18 @@ a.button:hover span {
     color: white;
 }
 
-/* 「トップ」ボタン */
+/* 「TOP」ボタン */
 
 a.roop {
-    margin: auto;
-    margin-top: 20px;
-    max-width: 253px;
+    font-size: 20px;
+    margin: 30px auto auto auto;
+    width: 170px;
     padding: 3px;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(145deg, black, silver, white, gold, black);
+    background-image: linear-gradient(145deg, black, silver, white, gold, black );
     border: 0;
-    border-radius: 10px;
+    border-radius: 40px;
     color: black;
     font-weight: bold;
     display: flex;
@@ -90,16 +143,15 @@ a.roop {
     transition: all .3s;
 }
 
-a.roop:active,
-a.roop:hover {
+a.roop:active, a.roop:hover {
     outline: 0;
 }
 
 a.roop span {
     background: white;
     padding: 1rem 4rem;
-    border-radius: 6px;
-    width: 100%;
+    border-radius: 35px;
+    width: 41px;
     height: 100%;
     transition: 300ms;
 }
@@ -109,9 +161,21 @@ a.roop:hover span {
     color: black;
 }
 
+/* カード */
+
+div#img {
+    text-align: center;
+    margin-left: 40px;
+}
+
 div#img img {
-    width: 190px;
+    width: 180px;
     border: solid 1px;
     border-radius: 10px;
-    margin: 100px 0 o 10px;
+    margin: 100px 40px 0 0;
+}
+
+div#img img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
 }

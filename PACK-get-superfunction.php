@@ -43,7 +43,7 @@
         </div>
         
         <form action="PACK-get-superfunction.php" method='post'>
-            <a href="PACK-get-superfunction.php" class="button"><span>1&nbsp;PACK&emsp;0&nbsp;JPY</span></a>
+            <a href="PACK-get-superfunction.php" class="button"><span>1&nbsp;PACK</span></a>
         </form>
         
             <a href="PACK-open-superfunction.php" class="roop"><span>TOP</span></a>
