@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="hue.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -53,7 +53,7 @@
         </div>
         <div id="dia_pack">
             <form action="PACK-get-select.php" method='post'>
-                <a href="PACK-get-selectn.php">
+                <a href="PACK-get-select.php">
                     <img src="pack_images/dia_pack.jpg" alt="ディアルガ パック">
                 </a>
             </form>
