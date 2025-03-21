@@ -2,7 +2,7 @@
 
 $pack = 'ミュウ';
 
-echo "$pack . パック\n";
+echo "$pack.パック\n";
 
 $save_dir = "$pack/";
 if ( !is_dir ( $save_dir ) ) {

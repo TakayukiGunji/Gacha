@@ -2,7 +2,7 @@
 
 $pack = 'ピカチュウ';
 
-echo "$pack . パック\n";
+echo "$pack.パック\n";
 
 $save_dir = "$pack/";
 if ( !is_dir ( $save_dir ) ) {
@@ -16,7 +16,7 @@ foreach ( $id as $image ) {
     $image_data = file_get_contents ( $image_url );
 
     if ( $image_data === false ) {
-        echo "画像なし: m$i\n";
+        echo "画像なし: m$image\n";
         continue;
     }
 
