@@ -81,6 +81,49 @@ body section#main {
     transition: all .3s;
 }
 
+
+
+.pika_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.pika_button:active, .pika_button:hover {
+    outline: 0;
+}
+
+.pika_button span {
+    background: black;
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.pika_button:hover span {
+    background: none;
+    color: white;
+}
+
 /* 「1 PACK」ボタン */
 
 a.button {

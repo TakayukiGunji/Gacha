@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hue.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 
 <body>
     <section id="main">
@@ -46,11 +42,11 @@
         ?>
         </div>
         
-        <form action="PACK-get-select.php" method='post'>
-            <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+        <form action="PACK-get-superfunction.php" method='post'>
+            <a href="PACK-get-superfunction.php" class="button"><span>1&nbsp;PACK</span></a>
         </form>
         
-            <a href="SelectPackOpen.php" class="roop"><span>TOP</span></a>
+            <a href="PACK-open-superfunction.php" class="roop"><span>TOP</span></a>
     </section>
 </body>
 
