@@ -51,7 +51,7 @@
             <!-- リザードンパックボタン -->
             <div id="riz_button">
                 <form action="PACK-get-select.php" method='post'>
-                    <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+                    <a href="PACK-get-select.php" class="riz_button"><span>1&nbsp;PACK</span></a>
                 </form>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <!-- ミュウツーパックボタン -->
             <div id="myu2_button">
                 <form action="PACK-get-select.php" method='post'>
-                    <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+                    <a href="PACK-get-select.php" class="myu2_button"><span>1&nbsp;PACK</span></a>
                 </form>
             </div>
         </div>
@@ -83,7 +83,7 @@
             <!-- ミュウパックボタン -->
             <div id="myu_button">
                 <form action="PACK-get-select.php" method='post'>
-                    <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+                    <a href="PACK-get-select.php" class="myu_button"><span>1&nbsp;PACK</span></a>
                 </form>
             </div>
         </div>
@@ -97,9 +97,9 @@
             </form>
 
             <!-- ディアルガパックボタン -->
-            <div id="dhia_button">
+            <div id="dia_button">
                 <form action="PACK-get-select.php" method='post'>
-                    <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+                    <a href="PACK-get-select.php" class="dia_button"><span>1&nbsp;PACK</span></a>
                 </form>
             </div>
         </div>
@@ -115,7 +115,7 @@
             <!-- パルキアパックボタン -->
             <div id="pal_button">
                 <form action="PACK-get-select.php" method='post'>
-                    <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+                    <a href="PACK-get-select.php" class="pal_button"><span>1&nbsp;PACK</span></a>
                 </form>
             </div>
         </div>
@@ -131,7 +131,7 @@
             <!-- アルセウスパックボタン -->
             <div id="al_button">
                 <form action="PACK-get-select.php" method='post'>
-                    <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
+                    <a href="PACK-get-select.php" class="al_button"><span>1&nbsp;PACK</span></a>
                 </form>
             </div>
         </div>
