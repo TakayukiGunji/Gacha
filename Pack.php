@@ -28,7 +28,7 @@ class Pack {
                 continue;
             }
 
-        $file_name = $save_dir . 'm'.$image.'.png';
+        $file_name = $save_dir . 'm'.$image . '.png';
         file_put_contents ( $file_name, $image_data );
         echo "画像を取得: $file_name\n";
         }
