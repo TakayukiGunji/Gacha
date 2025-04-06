@@ -33,8 +33,10 @@ CREATE TABLE Card_Pack (
     FOREIGN KEY ( pack_id ) REFERENCES pack ( id )
     );
 
+
+
 INSERT INTO CardList (
-    VALUES ( NULL, , 1 );
+    VALUES ( NULL, number, name, C:\xampp\htdocs\PHP\enjoy\images, 1, pack );
 )
 
 
