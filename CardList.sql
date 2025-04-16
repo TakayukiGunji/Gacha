@@ -33,7 +33,7 @@ CREATE TABLE Card_Pack (
     FOREIGN KEY ( pack_id ) REFERENCES pack ( id )
     );
 
-
+-- 20250416かカードをMySQLに追加
 
 INSERT INTO CardList (
     VALUES ( NULL, number, name, C:\xampp\htdocs\PHP\enjoy\images, 1, pack );

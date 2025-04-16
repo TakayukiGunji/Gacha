@@ -1,28 +1,16 @@
 <?php
-$pdo = new PDO ( 'mysql:host=localhost;dbname=PokePoke;charset=utf8', 'admin', 'password' );
-
-// 例：データ1件を追加
-
-$sql = "INSERT INTO CardList ( number, name, image, rare ) VALUES (?, ?, ?, ?)";
-$stmt = $pdo -> prepare ( $sql );
-$stmt -> execute ( [ 1, 'ピカチュウ', 'pikachu.png', 5, '拡張パック' ] );
-echo "データを挿入しました。\n";
-
-
-while ( )
-    INSERT INTO PokePoke VALUES ( NULL, $name, $image, $rare );
 
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=PokePoke;charset=utf8', 'admin', 'password');
+    $pdo = new PDO ( 'mysql:host=localhost;dbname=PokePoke;charset=utf8', 'admin', 'password' );
 
-    $csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOna8gMsTbZHFwKAdiBFWpphTi8QHBWChPETtU0_ndzE4vt2GKy45skap7NUfOnpqk6d8Qx0eKarAv/pub?gid=2065395659&single=true&output=csv";
+    $csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOna8gMsTbZHFwKAdiBFWpphTi8QHBWChPETtU0_ndzE4vt2GKy45skap7NUfOnpqk6d8Qx0eKarAv/pub?gid=907963889&single=true&output=csv";
     $csv = file_get_contents ( $csvUrl );
 
     // 1行ずつ配列に
     $rows = array_map ( "str_getcsv", explode ( "\n", $csv ) );
 
     // ヘッダー行を除く（もしあるなら）
-    array_shift ( $rows );
+    // array_shift ( $rows );
 
     foreach ( $rows as $row ) {
         // 空行を除外
@@ -47,4 +35,4 @@ try {
 ?>
 
 
-https://docs.google.com/spreadsheets/d/e/2PACX-1vTOna8gMsTbZHFwKAdiBFWpphTi8QHBWChPETtU0_ndzE4vt2GKy45skap7NUfOnpqk6d8Qx0eKarAv/pub?gid=2065395659&single=true&output=csv
+<!-- https://docs.google.com/spreadsheets/d/e/2PACX-1vTOna8gMsTbZHFwKAdiBFWpphTi8QHBWChPETtU0_ndzE4vt2GKy45skap7NUfOnpqk6d8Qx0eKarAv/pub?gid=907963889&single=true&output=csv -->
