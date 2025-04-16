@@ -50,7 +50,7 @@
             <a href="PACK-get-select.php" class="button"><span>1&nbsp;PACK</span></a>
         </form>
         
-            <a href="PACK-open-select.php" class="roop"><span>TOP</span></a>
+            <a href="SelectPackOpen.php" class="roop"><span>TOP</span></a>
     </section>
 </body>
 

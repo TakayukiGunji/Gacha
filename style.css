@@ -81,6 +81,307 @@ body section#main {
     transition: all .3s;
 }
 
+/* ピカチュウパックボタン */
+
+.pika_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, red, black, yellow, blue);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.pika_button:active, .pika_button:hover {
+    outline: 0;
+}
+
+.pika_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.pika_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* リザードンパックボタン */
+
+.riz_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, grey, red, orange, blue);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.riz_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.riz_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.riz_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ミュウツーパックボタン */
+
+.myu2_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, grey, violet, pink, blue);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.myu2_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.myu2_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.myu2_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ミュウパックボタン */
+
+.myu_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, skyblue, violet, pink, white, green);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.myu_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.myu_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.myu_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ディアルガパックボタン */
+
+.dia_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, rgb(48, 48, 117), rgb(9, 9, 61), silver, grey);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.dia_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.dia_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.dia_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* パルキアパックボタン */
+
+.pal_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, rgb(240, 89, 89), rgb(228, 140, 155), silver, grey);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.pal_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.pal_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.pal_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* アルセウスパックボタン */
+
+.al_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, black, yellow, rgb(4, 4, 63), orange, orange);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.al_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.al_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.al_button:hover span {
+    background: none;
+    color: white;
+}
+
 /* 「1 PACK」ボタン */
 
 a.button {
@@ -111,7 +412,7 @@ a.button:active, a.button:hover {
 }
 
 a.button span {
-    background: black;
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
     padding: 1rem 4rem;
     border-radius: 35px;
     width: 41px;
