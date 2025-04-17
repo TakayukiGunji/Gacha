@@ -34,16 +34,46 @@ body section#main {
 
 /* パックの画像 */
 
+form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
 #pack_img {
     display: flex;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
 }
 
-#pika_pack, #riz_pack, #myu2_pack, #myu_pack, #dia_pack, #pal_pack, #al_pack {
-    margin-left: 25px;
+#pika_pack, #riz_pack, #myu2_pack, #myu_pack, #dia_pack, #pal_pack, #al_pack, #sha_pack {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 1px 0 0;
+    display: inline-block;
+    cursor: pointer;
 }
 
-#pika_pack img, #riz_pack img, #myu2_pack img, #myu_pack img, #dia_pack img, #pal_pack img, #al_pack img {
-    width: 180px;
+#pika_pack img, #riz_pack img, #myu2_pack img, #myu_pack img, #dia_pack img, #pal_pack img, #al_pack img, #sha_pack img {
+    width: 170px;
+    display: block;
+    border: none;
+    transition: transform 0.3s;
 }
 
 #pika_pack img:hover {
@@ -77,6 +107,11 @@ body section#main {
 }
 
 #al_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#sha_pack img:hover {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
 }
@@ -382,7 +417,7 @@ body section#main {
     color: white;
 }
 
-/* 「1 PACK」ボタン */
+/* 「ALL PACK」ボタン */
 
 a.button {
     font-size: 20px;
@@ -485,4 +520,12 @@ div#img img {
 div#img img:hover {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
+}
+
+/* コピーライト */
+
+footer {
+    display: block;
+    margin: 30px auto 0 auto;
+    text-align: center;
 }

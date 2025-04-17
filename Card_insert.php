@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $pdo = new PDO ( 'mysql:host=localhost;dbname=PokePoke;charset=utf8', 'admin', 'password' );
+    $pdo = new PDO ( 'mysql:host=127.0.0.1;dbname=xslive230801_gunnji;charset=utf8', 'xslive230801_gun', 'livebusiness' );
 
     $csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOna8gMsTbZHFwKAdiBFWpphTi8QHBWChPETtU0_ndzE4vt2GKy45skap7NUfOnpqk6d8Qx0eKarAv/pub?gid=907963889&single=true&output=csv";
     $csv = file_get_contents ( $csvUrl );

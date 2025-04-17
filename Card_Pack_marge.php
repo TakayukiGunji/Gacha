@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO ( 'mysql:host=localhost;dbname=PokePoke;charset=utf8', 'admin', 'password' );
+$pdo = new PDO ( 'mysql:host=localhost;dbname=xslive230801_gunnji;charset=utf8', 'xslive230801_gun', 'livebusiness' );
 
 // すべてのカードを取得
 $cards = $pdo -> query ( "SELECT id, pack FROM CardList" ) -> fetchAll ( PDO::FETCH_ASSOC );

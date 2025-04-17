@@ -17,8 +17,8 @@
         <?php
 
         class Pack {
-            public function SelectPack ( $pack ) {
-                $pdo = new PDO ( 'mysql:host=localhost;dbname=PokePoke;charset=utf8', 'admin', 'password' );
+            public function SelectPackOpen ( $pack ) {
+                $pdo = new PDO ( 'mysql:host=localhost;dbname=xslive230801_gunnji;charset=utf8', 'xslive230801_gun', 'livebusiness' );
                 $sql = "SELECT number FROM Cardlist WHERE pack = $this -> pack;";
                 
             }

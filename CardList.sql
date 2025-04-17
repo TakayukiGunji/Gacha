@@ -30,7 +30,7 @@ CREATE TABLE Card_Pack (
     card_id INT,
     pack_id INT,
     FOREIGN KEY ( card_id ) REFERENCES CardList ( id ),
-    FOREIGN KEY ( pack_id ) REFERENCES pack ( id )
+    FOREIGN KEY ( pack_id ) REFERENCES Pack ( id )
     );
 
 -- 20250416かカードをMySQLに追加
