@@ -34,5 +34,6 @@ try {
 }
 ?>
 
-
+<!-- ↓ ブラウザからXsever上のPHPファイルを実行 -->
+<!-- https://gunnji.livebusinessstudent.net/enjoy/Card_insert.php -->
 <!-- https://docs.google.com/spreadsheets/d/e/2PACX-1vTOna8gMsTbZHFwKAdiBFWpphTi8QHBWChPETtU0_ndzE4vt2GKy45skap7NUfOnpqk6d8Qx0eKarAv/pub?gid=907963889&single=true&output=csv -->

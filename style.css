@@ -419,7 +419,7 @@ button {
 
 /* 「ALL PACK」ボタン */
 
-a.button {
+button.button {
     font-size: 20px;
     margin: 50px auto auto auto;
     width: 170px;
@@ -442,11 +442,11 @@ a.button {
     transition: all .3s;
 }
 
-a.button:active, a.button:hover {
+button.button:active, button.button:hover {
     outline: 0;
 }
 
-a.button span {
+button.button span {
     background-image: linear-gradient(rgb(55, 50, 50), black, black);
     padding: 1rem 4rem;
     border-radius: 35px;
@@ -455,7 +455,7 @@ a.button span {
     transition: 300ms;
 }
 
-a.button:hover span {
+button.button:hover span {
     background: none;
     color: white;
 }
@@ -529,3 +529,19 @@ footer {
     margin: 30px auto 0 auto;
     text-align: center;
 }
+
+/* レア度 */
+
+.rare {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.rare-8 { color: gold;letter-spacing: 0.2em; }
+.rare-7 { color: yellow; letter-spacing: 0.2em; }
+.rare-6 { color: yellow; letter-spacing: 0.2em; }
+.rare-5 { color: yellow; letter-spacing: 0.2em; }
+.rare-4 { color: white; letter-spacing: 0.2em; }
+.rare-3 { color: white; letter-spacing: 0.2em; }
+.rare-2 { color: white; letter-spacing: 0.2em; }
+.rare-1 { color: white; letter-spacing: 0.2em; }
