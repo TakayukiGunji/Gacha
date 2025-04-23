@@ -27,6 +27,14 @@
                     <img src="pack_images/pika_pack.jpg" alt="ピカチュウ パック">
                 </button>
             </form>
+
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="pika">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="pika_button">
+                    <span>GOD</span>
+                </button>
+            </form>
         </div>
 
         <!-- リザードンパック -->
@@ -34,6 +42,13 @@
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="riz">
                     <img src="pack_images/riz_pack.jpg" alt="リザードン パック">
+                </button>
+            </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="riz">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="riz_button">
+                    <span>GOD</span>
                 </button>
             </form>
         </div>
@@ -45,6 +60,13 @@
                     <img src="pack_images/myu2_pack.jpg" alt="ミュウツー パック">
                 </button>
             </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="myu2">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="myu2_button">
+                    <span>GOD</span>
+                </button>
+            </form>
         </div>
 
         <!-- ミュウパック -->
@@ -52,6 +74,13 @@
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="myu">
                     <img src="pack_images/myu_pack.jpg" alt="ミュウ パック">
+                </button>
+            </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="myu">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="myu_button">
+                    <span>GOD</span>
                 </button>
             </form>
         </div>
@@ -63,6 +92,13 @@
                     <img src="pack_images/dia_pack.jpg" alt="ディアルガ パック">
                 </button>
             </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="dhia">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="dia_button">
+                    <span>GOD</span>
+                </button>
+            </form>
         </div>
 
         <!-- パルキアパック -->
@@ -70,6 +106,13 @@
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="pal">
                     <img src="pack_images/pal_pack.jpg" alt="パルキア パック">
+                </button>
+            </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="pal">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="pal_button">
+                    <span>GOD</span>
                 </button>
             </form>
         </div>
@@ -81,6 +124,13 @@
                     <img src="pack_images/al_pack.jpg" alt="アルセウス パック">
                 </button>
             </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="al">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="al_button">
+                    <span>GOD</span>
+                </button>
+            </form>
         </div>
 
         <!-- シャイニングハイパック -->
@@ -90,22 +140,53 @@
                     <img src="pack_images/sha_pack.jpg" alt="シャイニングハイ パック">
                 </button>
             </form>
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="shai">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="shai_button">
+                    <span>GOD</span>
+                </button>
+            </form>
         </div>
 
     </div>
 
-    <!-- ALLパックボタン -->
-    <div id="open_button">
-        <form action="SelectPackGet.php" method='post'>
-            <a href="PACK-get-select.php" class="button"><span>ALL&nbsp;</span></a>
-        </form>
-    </div>
+        <!-- ALLパックボタン -->
+        <!-- <div id="all_pack">
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="all">
+                <button type="submit" class="all_button">
+                    <span>ALL</span>
+                </button>
+            </form>
+        </div> -->
+
+        <!-- ALL GOD ボタン -->
+        <div class="center-god-button">
+            <form action="SelectPackGet.php" method="post">
+                <input type="hidden" name="pack" value="all_god">
+                <input type="hidden" name="mode" value="god">
+                <button type="submit" class="god_button">GOD</button>
+            </form>
+        </div>
+
     <!-- <div>
         <a href="PACK-open-superfunction.php" class="roop"><span>TOP</span></a>
     </div> -->
+
 </section>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const rainbow = document.createElement("div");
+        rainbow.className = "rainbow-run";
+        document.body.appendChild(rainbow);
 
+        rainbow.addEventListener("animationend", () => {
+            rainbow.remove();
+        });
+    });
+</script>
 
 </body>
 
