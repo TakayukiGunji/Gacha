@@ -4,7 +4,7 @@ body {
     background: #CCCCCC;
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-size: 2000px 1000px;
+    background-size: 2000px 900px;
     /* font-family: "Potta One", system-ui;
     font-weight: 400;
     font-style: normal;       */
@@ -15,8 +15,8 @@ body {
 
 body section#main {
     margin: 20px auto 0 auto;
-    height: 550px;
-    /* border: solid 1px; */
+    padding-bottom: 150px;
+    height: auto;
 }
 
 #kyomu h1 {
@@ -138,6 +138,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .pika_button:active, .pika_button:hover {
@@ -148,7 +149,7 @@ button {
     background-image: linear-gradient(rgb(55, 50, 50), black, black);
     padding: 1rem 4rem;
     border-radius: 35px;
-    width: 41px;
+    width: 40px;
     height: 100%;
     transition: 300ms;
 }
@@ -181,6 +182,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .riz_button:active, .riz_button:hover {
@@ -224,6 +226,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .myu2_button:active, .riz_button:hover {
@@ -267,6 +270,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .myu_button:active, .riz_button:hover {
@@ -310,6 +314,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .dia_button:active, .riz_button:hover {
@@ -353,6 +358,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .pal_button:active, .riz_button:hover {
@@ -396,6 +402,7 @@ button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 .al_button:active, .riz_button:hover {
@@ -416,7 +423,141 @@ button {
     color: white;
 }
 
+/* シャイニングハイパックボタン */
+
+.shai_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient( 145deg, yellowgreen, lightgreen, rgb(48, 221, 234), silver, white );
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.shai_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.shai_button span {
+    background-image: linear-gradient( rgb( 55, 50, 50 ), black, black );
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.shai_button:hover span {
+    background: none;
+    color: white;
+}
+
 /* 「ALL PACK」ボタン */
+
+button.all_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.all_button:active, button.all_button:hover {
+    outline: 0;
+}
+
+button.all_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.all_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ALL GOD ボタン */
+
+button.all_god_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.all_god_button:active, button.all_god_button:hover {
+    outline: 0;
+}
+
+button.all_god_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.all_god_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* 替えパック */
 
 button.button {
     font-size: 20px;
@@ -439,6 +580,7 @@ button.button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 button.button:active, button.button:hover {
@@ -452,6 +594,7 @@ button.button span {
     width: 41px;
     height: 100%;
     transition: 300ms;
+    font-family: "Hachi Maru Pop", cursive;
 }
 
 button.button:hover span {
@@ -529,11 +672,24 @@ footer {
     text-align: center;
 }
 
+footer p {
+    margin-top: 30px;
+}
+
 /* レア度 */
 
 .rare {
     font-weight: bold;
     font-size: 1.2em;
+}
+
+span.rare {
+    -webkit-text-stroke: 1px black;
+    text-shadow: 
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .rare-8 { color: gold;letter-spacing: 0.2em; }
