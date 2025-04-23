@@ -1,10 +1,9 @@
 @charset "utf-8";
 
 body {
-    background: #EBEBE9;
-    background-image: -webkit-linear-gradient(160deg, rgba(255, 255, 255, 0.35) 3%, rgba(0, 0, 0, 0.35) 100%), -webkit-radial-gradient(101% 97%, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 98%);
-    background-image: linear-gradient(-70deg, rgba(255, 255, 255, 0.35) 3%, rgba(0, 0, 0, 0.35) 100%), radial-gradient(101% 97%, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 98%);
-    background-blend-mode: normal,normal,lighten;
+    background: #CCCCCC;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-size: 2000px 1000px;
     /* font-family: "Potta One", system-ui;
     font-weight: 400;
@@ -34,16 +33,46 @@ body section#main {
 
 /* パックの画像 */
 
+form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
 #pack_img {
     display: flex;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
 }
 
-#pika_pack, #riz_pack, #myu2_pack, #myu_pack, #dia_pack, #pal_pack, #al_pack {
-    margin-left: 25px;
+#pika_pack, #riz_pack, #myu2_pack, #myu_pack, #dia_pack, #pal_pack, #al_pack, #sha_pack {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 1px 0 0;
+    display: inline-block;
+    cursor: pointer;
 }
 
-#pika_pack img, #riz_pack img, #myu2_pack img, #myu_pack img, #dia_pack img, #pal_pack img, #al_pack img {
-    width: 180px;
+#pika_pack img, #riz_pack img, #myu2_pack img, #myu_pack img, #dia_pack img, #pal_pack img, #al_pack img, #sha_pack img {
+    width: 170px;
+    display: block;
+    border: none;
+    transition: transform 0.3s;
 }
 
 #pika_pack img:hover {
@@ -77,6 +106,11 @@ body section#main {
 }
 
 #al_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+#sha_pack img:hover {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
 }
@@ -382,9 +416,9 @@ body section#main {
     color: white;
 }
 
-/* 「1 PACK」ボタン */
+/* 「ALL PACK」ボタン */
 
-a.button {
+button.button {
     font-size: 20px;
     margin: 50px auto auto auto;
     width: 170px;
@@ -407,11 +441,11 @@ a.button {
     transition: all .3s;
 }
 
-a.button:active, a.button:hover {
+button.button:active, button.button:hover {
     outline: 0;
 }
 
-a.button span {
+button.button span {
     background-image: linear-gradient(rgb(55, 50, 50), black, black);
     padding: 1rem 4rem;
     border-radius: 35px;
@@ -420,7 +454,7 @@ a.button span {
     transition: 300ms;
 }
 
-a.button:hover span {
+button.button:hover span {
     background: none;
     color: white;
 }
@@ -486,3 +520,27 @@ div#img img:hover {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
 }
+
+/* コピーライト */
+
+footer {
+    display: block;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+/* レア度 */
+
+.rare {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.rare-8 { color: gold;letter-spacing: 0.2em; }
+.rare-7 { color: yellow; letter-spacing: 0.2em; }
+.rare-6 { color: yellow; letter-spacing: 0.2em; }
+.rare-5 { color: yellow; letter-spacing: 0.2em; }
+.rare-4 { color: white; letter-spacing: 0.2em; }
+.rare-3 { color: white; letter-spacing: 0.2em; }
+.rare-2 { color: white; letter-spacing: 0.2em; }
+.rare-1 { color: white; letter-spacing: 0.2em; }
