@@ -65,6 +65,7 @@
                 ];
             }
 
+            // 通常パック
             public function selectCards ( $packName )
             {
                 $selectedCards = [  ];
@@ -106,7 +107,7 @@
                 return $selectedCards;
             }
 
-                        // レア度を抽選する
+            // レア度を抽選する
             private function selectRarity ( array $distribution )
             {
                 $rand = mt_rand (  ) / mt_getrandmax (  ) * 100;
