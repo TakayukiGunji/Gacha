@@ -65,6 +65,7 @@
                 ];
             }
 
+            // 通常パック
             public function selectCards ( $packName )
             {
                 $selectedCards = [  ];
@@ -87,7 +88,20 @@
             }
 
             // GODパック
-            public function selectGodPack ( $packName ) {
+            public function selectGodPack ( string $packName ): array
+            {
+                if ( $packName === 'all' ) {
+                    $stmt = $this -> pdo -> prepare ( "SELECT * FROM CardList WHERE rare >= 5 ORDER BY RAND() LIMIT 5" );
+                    $stmt -> execute (  );
+                    $cards = $stmt -> fetchAll ( PDO::FETCH_ASSOC );
+
+                    // 画像パスを追加
+                    foreach ($cards as &$card) {
+                    $card['image'] = 'images/m' . $card['id'] . '.png';
+                    }
+                    return $cards;
+                }
+
                 $selectedCards = [  ];
         
                 $rarityPool =
@@ -106,7 +120,7 @@
                 return $selectedCards;
             }
 
-                        // レア度を抽選する
+            // レア度を抽選する
             private function selectRarity ( array $distribution )
             {
                 $rand = mt_rand (  ) / mt_getrandmax (  ) * 100;
