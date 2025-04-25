@@ -88,7 +88,20 @@
             }
 
             // GODパック
-            public function selectGodPack ( $packName ) {
+            public function selectGodPack ( string $packName ): array
+            {
+                if ( $packName === 'all' ) {
+                    $stmt = $this -> pdo -> prepare ( "SELECT * FROM CardList WHERE rare >= 5 ORDER BY RAND() LIMIT 5" );
+                    $stmt -> execute (  );
+                    $cards = $stmt -> fetchAll ( PDO::FETCH_ASSOC );
+
+                    // 画像パスを追加
+                    foreach ($cards as &$card) {
+                    $card['image'] = 'images/m' . $card['id'] . '.png';
+                    }
+                    return $cards;
+                }
+
                 $selectedCards = [  ];
         
                 $rarityPool =
