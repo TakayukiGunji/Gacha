@@ -120,7 +120,24 @@
                 return $selectedCards;
             }
 
+            // 全部GOD
+            public function selectAllGodPack(): array
+            {
+                $stmt = $this->pdo->prepare("
+                    SELECT id, name, rare, image
+                    FROM CardList
+                    WHERE rare >= 5
+                    ORDER BY RAND()
+                    LIMIT 5
+                ");
+                $stmt->execute();
+                $cards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                return $cards;
+            }
+
             // レア度を抽選する
+
             private function selectRarity ( array $distribution )
             {
                 $rand = mt_rand (  ) / mt_getrandmax (  ) * 100;

@@ -23,11 +23,15 @@
         $pack = $_POST [ 'pack' ] ?? null;
         $mode = $_POST [ 'mode' ] ?? null;
         $cards = [  ];
+        $packDisplay = '';
 
         if ( $pack ) {
             $selector = new CardSelector ( $pdo );
 
-            if ( $mode === 'god' ) {
+            if ( $pack === 'all_god' && $mode === 'god' ) {
+                $cards = $selector -> selectAllGodPack (  );
+                $packDisplay = 'GOD';
+            } else if ( $mode === 'god' ) {
                 $cards = $selector -> selectGodPack ( $pack );
                 $packDisplay = ( $packNames [ $pack ] ?? $pack );
             } else {
@@ -52,14 +56,6 @@
 </head>
 
 <body>
-    <?php
-    if ($mode === 'god'):
-    ?>
-
-    <?php
-    endif;
-    ?>
-
     <section id="main">
         <?php
         if ( $pack ):
@@ -116,7 +112,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const effect = document.querySelector(".lightning-effect");
-            if (effect) {
+            if ( effect ) {
                 effect.addEventListener("animationend", () => {
                     effect.remove();
                 });
@@ -129,12 +125,5 @@
             }
         });
     </script>
-
 </body>
-
 </html>
-
-
-
-<!-- 色違いのレア度が間違っている！！！！！ 20250421 -->
-<!-- ↑ 修正済み 20250422 -->

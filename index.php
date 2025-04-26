@@ -14,10 +14,20 @@
 <body>
     
 <section id="main" >
+    
+    <div id="logo">
+        <img src="PokePoke_logo.png" alt="PokePoke_logo">
+    </div>
+    
     <div id="kyomu">
         <h1>歓喜<span>&emsp;のち&emsp;</span>虚無</h1>
     </div>
-
+    <div id="message">
+        <p>あなたは&nbsp;噂の&nbsp;ゴッドパック&nbsp;を引いたことがありますか？</p>
+        <p>まだだというそこの&nbsp;アナタへ</p>
+        <p>ご用意&nbsp;いたしました</p>
+    </div>
+    
     <div id="pack_img">
 
         <!-- ピカチュウパック -->
@@ -151,16 +161,6 @@
 
     </div>
 
-        <!-- ALLパックボタン -->
-        <!-- <div id="all_pack">
-            <form action="SelectPackGet.php" method="post">
-                <input type="hidden" name="pack" value="all">
-                <button type="submit" class="all_button">
-                    <span>ALL</span>
-                </button>
-            </form>
-        </div> -->
-
         <!-- ALL GOD ボタン -->
         <div class="center-god-button">
             <form action="SelectPackGet.php" method="post">
@@ -169,10 +169,6 @@
                 <button type="submit" class="god_button">GOD</button>
             </form>
         </div>
-
-    <!-- <div>
-        <a href="PACK-open-superfunction.php" class="roop"><span>TOP</span></a>
-    </div> -->
 
 </section>
 
