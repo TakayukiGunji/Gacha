@@ -121,17 +121,18 @@
             }
 
             // 全部GOD
-            public function selectAllGodPack(): array
+            public function selectAllGodPack (  ): array
             {
-                $stmt = $this->pdo->prepare("
+                $stmt = $this -> pdo -> prepare
+                ("
                     SELECT id, name, rare, image
                     FROM CardList
                     WHERE rare >= 5
                     ORDER BY RAND()
                     LIMIT 5
                 ");
-                $stmt->execute();
-                $cards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $stmt -> execute (  );
+                $cards = $stmt -> fetchAll ( PDO::FETCH_ASSOC );
 
                 return $cards;
             }

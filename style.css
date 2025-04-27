@@ -7,50 +7,78 @@ body {
     -moz-user-select: none;    /* Firefox用 */
     -ms-user-select: none;     /* IE/Edge用 */
     background: #CCCCCC;
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+    /* background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); */
     background-size: 2000px 850px;
-    /* font-family: "Potta One", system-ui;
-    font-weight: 400;
-    font-style: normal;       */
-    font-family: "Hachi Maru Pop", cursive;
+
+    /* background-image: -webkit-radial-gradient(50% 150%, #787B7D 5%, #4B5052 100%);
+    background-image: radial-gradient(50% 150%, #787B7D 5%, #4B5052 100%); */
+
+    background-image: -webkit-linear-gradient(right, #596164 1%, #868F96 99%);
+    background-image: linear-gradient(-90deg, #596164 1%, #868F96 99%);
+
+    /* background: -webkit-linear-gradient(top right, #E2E8E6 0%, #CDD3CD 100%), -webkit-linear-gradient(right, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%);
+    background: linear-gradient(to bottom left, #E2E8E6 0%, #CDD3CD 100%), linear-gradient(to left, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%);
+    background-blend-mode: screen;   */
+
+    /* font-family: "Potta One", system-ui; */
+    /* font-family: "Hachi Maru Pop", cursive; */
+
+    font-family: "Zen Maru Gothic", serif;
     font-weight: 400;
     font-style: normal;
 }
 
 /* ロゴ */
 
-body div#logo {
+#logo {
     text-align: center;
     margin: 0;
 }
 
-body div#logo img {
-    width: 20vw;
+#logo img {
+    width: 30vw;
+}
+
+.logo {
+    text-align: center;
+    margin: 0;
+}
+
+.logo img {
+    width: 10vw;
 }
 
 body section#main {
     margin: 20px auto 0 auto;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     height: auto;
 }
 
 #kyomu h1 {
     margin: 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 #kyomu span {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
 
+section#main div {
+    color: #000000;
+}
+
+sectuin#main div#message {
+    margin: 20px auto 0 auto;
+}
+
 section#main div#message p {
-    margin: 0 auto o auto;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* パックの画像 */
@@ -71,13 +99,14 @@ button {
     display: inline-block;
 }
 
-#pack_img {
+.pack_img {
+    text-align: center;
     pointer-events: auto;
     display: flex;
     background: none;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: 180px 0 0 0;
     display: inline-block;
     cursor: pointer;
 }
@@ -125,6 +154,7 @@ button {
 {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
+    box-shadow: 0 0 50px white;
 }
 
 /* ボタン共通 */
@@ -136,7 +166,10 @@ button {
 .dia_button,
 .pal_button,
 .al_button,
-.shai_button
+.shai_button,
+.god_button,
+.more_button,
+.top_button
 {
     pointer-events: auto;
     font-size: 22px;
@@ -148,7 +181,6 @@ button {
     border-radius: 40px;
     color: #333;
     font-weight: bold;
-    font-family: "Hachi Maru Pop", cursive;
     text-align: center;
     text-shadow: 1px 1px 1px white;
     display: inline-block;
@@ -157,6 +189,9 @@ button {
     transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 1;
+    font-family: "Zen Maru Gothic", serif;
+    width: 150px;
+    height: 70px;
 }
 
 .pika_button:hover,
@@ -166,7 +201,10 @@ button {
 .dia_button:hover,
 .pal_button:hover,
 .al_button:hover,
-.shai_button:hover
+.shai_button:hover,
+.god_button:hover,
+.more_button:hover,
+.top_button:hover
 {
     box-shadow: 0 0 30px white, 0 0 10px silver;
     transform: scale(1.05);
@@ -180,13 +218,16 @@ button {
 .dia_button::after,
 .pal_button::after,
 .al_button::after,
-.shai_button::after
+.shai_button::after,
+.god_button::after,
+.more_button::after,
+.top_button::after
 {
-    content: "⭐️";
+    content: "⚡️";
     position: absolute;
     top: -10px;
     right: -15px;
-    font-size: 28px;
+    font-size: 20px;
     animation: blink 0.8s infinite alternate;
 }
 
@@ -250,43 +291,14 @@ button {
     margin-top: 5px;
 }
 
-button.god_button {
-    pointer-events: auto;
-    font-size: 22px;
-    margin: 60px auto auto auto;
-    padding: 0.8rem 3rem;
-    align-items: center;
-    text-align: center;
+.god_button {
     border: 2px solid #d4af37;
-    border-radius: 40px;
     background: linear-gradient(145deg, #fffbe6, #ffd700, #ffcc00, #b8860b);
-    color: #3c2f00;
-    font-weight: bold;
-    font-family: "Hachi Maru Pop", cursive;
-    text-align: center;
-    text-shadow: 1px 1px 1px white;
-    display: inline-block;
-    cursor: pointer;
     box-shadow: 0 0 20px gold;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    z-index: 1;
 }
 
-button.god_button:hover {
-    background: linear-gradient(145deg, #fff, #f9d423, #ffcc00, #c5a600);
+.god_button:hover {
     box-shadow: 0 0 30px gold, 0 0 10px yellow;
-    transform: scale(1.05);
-    color: #000;
-}
-
-button.god_button::after {
-    content: "⭐️";
-    position: absolute;
-    top: -10px;
-    right: -15px;
-    font-size: 28px;
-    animation: blink 0.8s infinite alternate;
 }
 
 @keyframes blink {
@@ -294,142 +306,141 @@ button.god_button::after {
     100% { opacity: 1; transform: rotate(50deg) scale(1.2); }
 }
 
-/* もう1回 ボタン */
+/* 2個のボタン */
 
-button.button {
-    pointer-events: auto;
-    font-size: 20px;
-    margin: 50px auto auto auto;
-    width: 170px;
-    padding: 3px;
-    align-items: center;
-    text-align: center;
-    background-image: linear-gradient(145deg, white, silver, black, gold, white);
-    border: 0;
-    border-radius: 40px;
-    color: white;
-    font-weight: bold;
+#two_button {
     display: flex;
     justify-content: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: all .3s;
-    font-family: "Hachi Maru Pop", cursive;
+    align-items: center;
+    gap: 30px; /* ボタン同士の間隔 */
+    margin: 5px 0;
 }
 
-button.button:active, button.button:hover {
-    outline: 0;
+#two_button form,
+#two_button a {
+    margin: 0;
 }
 
-button.button span {
-    background-image: linear-gradient(rgb(55, 50, 50), black, black);
-    padding: 1rem 4rem;
-    border-radius: 35px;
-    width: 41px;
-    height: 100%;
-    transition: 300ms;
-    font-family: "Hachi Maru Pop", cursive;
+/* もう1回 ボタン */
+
+.center-more-button, .center-top-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-button.button:hover span {
-    background: none;
-    color: white;
+.more_button {
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    box-shadow: 0 0 50px black;
+    border: 2px solid gray;
+    width: 150px;
+    height: 70px;
+}
+
+.more_button span, .top_button span {
+    font-family: "Zen Maru Gothic", serif;
+}
+
+.more_button:hover {
+    box-shadow: 0 0 100px black, 0 0 100px black;
 }
 
 /* 「TOP」ボタン */
 
-a.roop {
-    pointer-events: auto;
-    font-size: 20px;
-    margin: 30px auto auto auto;
-    width: 170px;
-    padding: 3px;
-    align-items: center;
-    text-align: center;
+.top_button {
     background-image: linear-gradient(145deg, black, silver, white, gold, black );
-    border: 0;
-    border-radius: 40px;
-    color: black;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* 開封パック */
+
+#get_pack {
+    text-align: center;
+    margin-right: 40px;
+}
+
+#get_pack_image {
+    width: 180px;    
+}
+
+#get_pack_image:hover {
+    transform:scale( 1.1, 1.1 );
     transition: all .3s;
+    box-shadow: 0 0 50px white;
 }
 
-a.roop:active, a.roop:hover {
-    outline: 0;
-}
+/* 開封パック名 */
 
-a.roop span {
-    background: white;
-    padding: 1rem 4rem;
-    border-radius: 35px;
-    width: 41px;
-    height: 100%;
-    transition: 300ms;
-}
-
-a.roop:hover span {
-    background: none;
-    color: black;
+.pack-title {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 /* カード */
 
-div#img {
-    text-align: center;
-    margin-left: 40px;
+div#card_container {
+    pointer-events: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px; /* カード同士の隙間を空ける */
 }
 
-div#img img {
-    width: 180px;
-    border: solid 1px;
-    border-radius: 10px;
-    margin: 100px 40px 0 0;
+div.card_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+    margin: 80px 0 0 0;
+    width: 200px;
 }
 
-div#img img:hover {
-    transform:scale( 1.1, 1.1 );
+div.card_image img {
+    width: 180px; /* 💥画像の幅をちゃんと指定する（hoverだけじゃなく通常状態も指定！） */
+    height: auto;
+    display: block;
+    border: none;
     transition: all .3s;
+}
+
+div.card_image img:hover {
+    transform:scale( 1.5, 1.5 );
+    transition: all .3s;
+    box-shadow: 0 0 50px white;
+}
+
+div.card_image p {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+/* レアシンボル */
+
+p#rare_symbol {
+    margin-top: 5px;
 }
 
 /* コピーライト */
 
 footer {
     display: block;
-    margin: 30px auto 0 auto;
+    margin: 0 auto 0 auto;
     text-align: center;
 }
 
 footer p {
-    margin-top: 30px;
+    margin-top: 0;
+    font-size: 15px;
+    color: #000000;
 }
 
 /* レア度 */
-
-.rare {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-span.rare {
-    -webkit-text-stroke: 1px black;
-    text-shadow: 
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-}
 
 .rare-8 { color: gold;letter-spacing: 0.2em; }
 .rare-7 { color: yellow; letter-spacing: 0.2em; }
@@ -439,13 +450,6 @@ span.rare {
 .rare-3 { color: white; letter-spacing: 0.2em; }
 .rare-2 { color: white; letter-spacing: 0.2em; }
 .rare-1 { color: white; letter-spacing: 0.2em; }
-
-body section#main p.pack-title {
-    font-size: 40px;
-    margin: 10px auto 10px auto;
-    text-align: center;
-    font-weight: bold;
-}
 
 /* GODエフェクト 白*/
 

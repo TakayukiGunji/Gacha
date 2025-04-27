@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="hue.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
-
+    <!-- Hachi maru -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet"> -->
+    <!-- Zen maru -->
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -23,12 +25,13 @@
         <h1>歓喜<span>&emsp;のち&emsp;</span>虚無</h1>
     </div>
     <div id="message">
+        <p>あなたは&nbsp;カードパックを&nbsp;際限なく&nbsp;引きたいと&nbsp;思ったことはありませんか？</p>
         <p>あなたは&nbsp;噂の&nbsp;ゴッドパック&nbsp;を引いたことがありますか？</p>
-        <p>まだだというそこの&nbsp;アナタへ</p>
+        <p>そんな&nbsp;あなたへ</p>
         <p>ご用意&nbsp;いたしました</p>
     </div>
     
-    <div id="pack_img">
+    <div class="pack_img">
 
         <!-- ピカチュウパック -->
         <div id="pika_pack">
@@ -147,7 +150,7 @@
         <div id="sha_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="shai">
-                    <img src="pack_images/sha_pack.jpg" alt="シャイニングハイ パック">
+                    <img src="pack_images/shai_pack.jpg" alt="シャイニングハイ パック">
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -166,22 +169,28 @@
             <form action="SelectPackGet.php" method="post">
                 <input type="hidden" name="pack" value="all_god">
                 <input type="hidden" name="mode" value="god">
-                <button type="submit" class="god_button">GOD</button>
+                <button type="submit" class="god_button">ALL</button>
             </form>
         </div>
 
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const rainbow = document.createElement("div");
-        rainbow.className = "rainbow-run";
-        document.body.appendChild(rainbow);
-
-        rainbow.addEventListener("animationend", () => {
-            rainbow.remove();
-        });
-    });
+<script>    
+    document.addEventListener
+    (
+        "keydown", function ( event )
+        {
+            if ( event.key === "Enter" )
+            {
+                event.preventDefault (  ); // ページのリロードを防ぐ
+                const godButton = document.querySelector ( ".god_button" );
+                if ( godButton )
+                {
+                    godButton.click (  );
+                }
+            }
+        }
+    );
 </script>
 
 </body>
