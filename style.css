@@ -401,13 +401,13 @@ button {
 }
 
 #get_pack_image {
-    width: 180px;    
+    width: 190px;    
 }
 
 #get_pack_image:hover {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
-    box-shadow: 0 0 50px white;
+    box-shadow: 0 0 100px white, 0 0 100px white;
 }
 
 /* 開封パック名 */
@@ -521,7 +521,7 @@ footer p {
 /* モーダル内の画像 */
 .modal-content {
     width: auto;
-    height: 90vh;
+    height: 70vh;
     max-width: 90vw;
     object-fit: contain;
     border-radius: 10px;
