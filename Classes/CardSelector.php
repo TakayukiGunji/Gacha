@@ -91,7 +91,7 @@
             public function selectGodPack ( string $packName ): array
             {
                 if ( $packName === 'all' ) {
-                    $stmt = $this -> pdo -> prepare ( "SELECT * FROM CardList WHERE rare >= 5 ORDER BY RAND() LIMIT 5" );
+                    $stmt = $this -> pdo -> prepare ( "SELECT * FROM CardList WHERE rare >= 4 ORDER BY RAND() LIMIT 5" );
                     $stmt -> execute (  );
                     $cards = $stmt -> fetchAll ( PDO::FETCH_ASSOC );
 
@@ -127,7 +127,7 @@
                 ("
                     SELECT id, name, rare, image
                     FROM CardList
-                    WHERE rare >= 5
+                    WHERE rare >= 4
                     ORDER BY RAND()
                     LIMIT 5
                 ");

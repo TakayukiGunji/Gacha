@@ -38,7 +38,7 @@ body {
 }
 
 #logo img {
-    width: 30vw;
+    width: 20vw;
 }
 
 .logo {
@@ -57,7 +57,7 @@ body section#main {
 }
 
 #kyomu h1 {
-    margin: 0;
+    margin: 30px;
     text-align: center;
     font-size: 50px;
 }
@@ -66,6 +66,22 @@ body section#main {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+}
+
+span#god_font {
+    font-size: 40px;
+    font-weight: bold;
+    background-image: linear-gradient(70deg, black 45%, yellow 50%, black 55% );
+    background-size: 500% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3s infinite linear;
+}
+    
+@keyframes shine {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 section#main div {
@@ -103,11 +119,14 @@ button {
     text-align: center;
     pointer-events: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* パック同士の間隔 */
     background: none;
     border: none;
     padding: 0;
     margin: 180px 0 0 0;
-    display: inline-block;
     cursor: pointer;
 }
 
@@ -211,7 +230,7 @@ button {
     color: #000;
 }
 
-.pika_button::after,
+/* .pika_button::after,
 .riz_button::after,
 .myu2_button::after,
 .myu_button::after,
@@ -223,13 +242,13 @@ button {
 .more_button::after,
 .top_button::after
 {
-    content: "⚡️";
+    content: "⚡";
     position: absolute;
     top: -10px;
     right: -15px;
     font-size: 20px;
     animation: blink 0.8s infinite alternate;
-}
+} */
 
 /* ピカチュウパックボタン */
 
@@ -291,7 +310,8 @@ button {
     margin-top: 5px;
 }
 
-.god_button {
+/* ゴールドバージョン */
+/* .god_button {
     border: 2px solid #d4af37;
     background: linear-gradient(145deg, #fffbe6, #ffd700, #ffcc00, #b8860b);
     box-shadow: 0 0 20px gold;
@@ -299,6 +319,23 @@ button {
 
 .god_button:hover {
     box-shadow: 0 0 30px gold, 0 0 10px yellow;
+} */
+
+/* 高級シルバー */
+.god_button {
+    border: 2px solid #dcdcdc;
+    background: linear-gradient(145deg, #ffffff, #dcdcdc, #b0b0b0, #808080, #606060);
+    box-shadow: 0 0 20px #dcdcdc, 0 0 30px #b0b0b0 inset;
+    color: black;
+}
+
+.god_button:hover {
+    background: linear-gradient(145deg, #f0f0f0, #d0d0d0, #a0a0a0, #707070);
+    box-shadow: 
+        0 0 40px #ffffff,
+        0 0 20px #cccccc inset,
+        0 0 10px #ffffff;
+    transform: scale(1.05);
 }
 
 @keyframes blink {
@@ -420,36 +457,31 @@ div.card_image p {
     margin-top: 30px;
 }
 
-/* レアシンボル */
-
-p#rare_symbol {
-    margin-top: 5px;
-}
-
 /* コピーライト */
 
 footer {
     display: block;
-    margin: 0 auto 0 auto;
+    margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 footer p {
-    margin-top: 0;
+    margin: 0;
     font-size: 15px;
     color: #000000;
 }
 
 /* レア度 */
 
-.rare-8 { color: gold;letter-spacing: 0.2em; }
-.rare-7 { color: yellow; letter-spacing: 0.2em; }
-.rare-6 { color: yellow; letter-spacing: 0.2em; }
-.rare-5 { color: yellow; letter-spacing: 0.2em; }
-.rare-4 { color: white; letter-spacing: 0.2em; }
-.rare-3 { color: white; letter-spacing: 0.2em; }
-.rare-2 { color: white; letter-spacing: 0.2em; }
-.rare-1 { color: white; letter-spacing: 0.2em; }
+.rare-8 { color: gold;letter-spacing: 0.2em; text-shadow: none; filter: drop-shadow(0 0 8px gold); }
+.rare-7 { color: yellow; letter-spacing: 0.2em; text-shadow: none; filter: drop-shadow(0 0 8px gold); }
+.rare-6 { color: yellow; letter-spacing: 0.2em; text-shadow: none; filter: drop-shadow(0 0 8px gold); }
+.rare-5 { color: yellow; letter-spacing: 0.2em; text-shadow: none; filter: drop-shadow(0 0 8px gold); }
+.rare-4 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
+.rare-3 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
+.rare-2 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
+.rare-1 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
 
 /* GODエフェクト 白*/
 
@@ -469,4 +501,40 @@ footer p {
     0%   { opacity: 0; }
     50%  { opacity: 1; }
     100% { opacity: 0; }
+}
+
+.modal {
+    display: none; /* 最初は隠す */
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* 開くときflexにする（JSで） */
+.modal.show {
+    display: flex;
+}
+
+/* モーダル内の画像 */
+.modal-content {
+    width: auto;
+    height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* 閉じるボタン */
+#close {
+    pointer-events: auto;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }

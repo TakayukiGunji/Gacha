@@ -30,7 +30,7 @@
             'pal' => 'pal_pack.jpg',
             'al' => 'al_pack.jpg',
             'shai' => 'shai_pack.jpg',
-            'ALL' => 'all_pack.jpg'
+            'all_god' => 'All_God_pack.jpg'
         ];
 
         $pack = $_POST [ 'pack' ] ?? null;
@@ -87,7 +87,11 @@
                             <input type="hidden" name="pack" value="<?= htmlspecialchars($pack) ?>">
                             <input type="hidden" name="mode" value="<?= htmlspecialchars($mode) ?>">
                             <button type="submit" style="border: none; background: none; padding: 0;">
-                                <img src="/enjoy/pack_images/<?= htmlspecialchars($packImages[$pack]) ?>" alt="<?= htmlspecialchars($packNames[$pack]) ?>" id="get_pack_image">
+                                <?php if (isset($packImages[$pack])): ?>
+                                    <img src="/enjoy/pack_images/<?= htmlspecialchars($packImages[$pack]) ?>" alt="<?= htmlspecialchars($packNames[$pack] ?? 'パック名不明') ?>" id="get_pack_image">
+                                <?php else: ?>
+                                    <p>パック画像が見つかりませんでした。</p>
+                                <?php endif; ?>
                             </button>
                         </form>
                         <p class="pack-title"><?= htmlspecialchars ( $packDisplay ) ?></p>
@@ -101,62 +105,37 @@
 
                 </div>
 
-        <?php
-                $open = new Open (  );
+        <?php   $open = new Open (  );
                 $cardDataList = $open -> packOpen ( $cards );
 
                 foreach ( $cardDataList as $data ):
-                    if ( $data ):
-        ?>
+                    if ( $data ): ?>
                         <div class="card_image">
                             <img src="<?= htmlspecialchars ( $data [ 'image' ] ) ?>" alt="<?= htmlspecialchars ( $data [ 'name' ] ) ?>">
                             <p><?= htmlspecialchars ( $data [ 'name' ] ) ?></p>
                             <p id="rare_symbol"><?= $data [ 'rare_symbol' ] ?></p>
                         </div>
-        <?php
-                    else:
-        ?>
+        <?php else: ?>
                         <div>
                             <p>該当カードが見つかりませんでした</p>
                         </div>
-        <?php
-                    endif;
-                endforeach;
-        ?>
+        <?php       endif;
+                endforeach; ?>
         </div>
-
-        <?php
-        if ($mode === 'god'):
-        ?>
-
-            <!-- フラッシュエフェクト -->
-            <div class="lightning-effect"></div>
 
             <div id="two_button">
                 <div class="center-more-button">
                     <form action="SelectPackGet.php" method="post">
-                        <input type="hidden" name="pack" value="<?= htmlspecialchars ( $pack ) ?>">
-                        <input type="hidden" name="mode" value="god">
+                        <input type="hidden" name="pack" value="<?= htmlspecialchars($pack) ?>">
+                        <?php if ($mode === 'god'): ?>
+                            <input type="hidden" name="mode" value="god">
+                        <?php endif; ?>
                         <button type="submit" class="more_button">
                             <span>MORE</span>
                         </button>
                     </form>
                 </div>
-                
-                        <?php
-                        else:
-                        ?>
-                <div class="center-more-button">
-                    <form action="SelectPackGet.php" method="post">
-                        <input type="hidden" name="pack" value="<?= htmlspecialchars ( $pack ) ?>">
-                        <button type="submit" class="more_button">
-                            <span>MORE</span>
-                        </button>
-                    </form>
-                </div>
-                        <?php
-                        endif;
-                        ?>
+
                 <div class="center-top-button">
                     <a href="index.php" class="roop">
                         <button class="top_button">
@@ -165,36 +144,86 @@
                     </a>
                 </div>
             </div>
+
+            
+            <!-- フラッシュエフェクト -->
+            <div class="lightning-effect" style="display: none;"></div>
+            
+            <?php
+            $hasHighRare = false;
+            foreach ($cardDataList as $data) {
+                if ($data && (int)$data['rare'] >= 4) {
+                    $hasHighRare = true;
+                    break; // 1枚でもあれば即終了
+                }
+            }
+            ?>
+
     </section>
 
     <script>
         // エフェクト残らないJS
-        document.addEventListener("DOMContentLoaded", () => {
-            const effect = document.querySelector(".lightning-effect");
-            if ( effect ) {
-                effect.addEventListener("animationend", () => {
-                    effect.remove();
-                });
-            }
-            const sparkle = document.querySelector(".sparkle-effect");
-            if (sparkle) {
-                sparkle.addEventListener("animationend", () => {
-                    sparkle.remove();
-                });
-            }
-        });
+        const hasHighRare = <?= $hasHighRare ? 'true' : 'false' ?>;
 
-        // エンターキー押下でMOREボタン起動
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault(); // ページのリロードを防ぐ
-                const moreButton = document.querySelector(".more_button");
-                if (moreButton) {
-                    moreButton.click();
+        document.addEventListener ( "DOMContentLoaded", (  ) => {
+            if ( hasHighRare ) {
+                const effect = document.querySelector ( ".lightning-effect" );
+                if ( effect ) {
+                    effect.addEventListener ( "animationend", (  ) => {
+                        effect.remove (  );
+                    } );
+                    effect.style.display = "block"; // フラッシュ発動！
                 }
             }
+        } );
+
+        // エンターキー押下でMOREボタン起動
+        document.addEventListener ( "keydown", function ( event ) {
+            if ( event.key === "Enter" ) {
+                event.preventDefault (  ); // ページのリロードを防ぐ
+                const moreButton = document.querySelector ( ".more_button" );
+                if ( moreButton ) {
+                    moreButton.click (  );
+                }
+            }
+        } );
+        
+        // カード画像クリック→モーダルで拡大
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("modal");
+            const modalImg = document.getElementById("modal-img");
+            const closeBtn = document.getElementById("close");
+
+            const cardImages = document.querySelectorAll(".card_image img");
+
+            cardImages.forEach(img => {
+                img.addEventListener("click", function() {
+                    modal.style.display = "flex"; // モーダルを表示
+                    modalImg.src = this.src; // 押した画像のsrcをモーダルにセット
+                });
+            });
+
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none"; // モーダルを閉じる
+            });
+
+            modal.addEventListener("click", function(e) {
+                if (e.target === modal) { // モーダルの背景をクリックしても閉じる
+                    modal.style.display = "none";
+                }
+            });
         });
+
     </script>
+
+        <!-- モーダル本体 -->
+    <div id="modal" class="modal">
+        <!-- 閉じるボタン -->
+        <span id="close">&times;</span>
+        <!-- モーダル内に表示する画像 -->
+        <img class="modal-content" id="modal-img">
+    </div>
+
 
 </body>
 </html>

@@ -26,7 +26,7 @@
     </div>
     <div id="message">
         <p>あなたは&nbsp;カードパックを&nbsp;際限なく&nbsp;引きたいと&nbsp;思ったことはありませんか？</p>
-        <p>あなたは&nbsp;噂の&nbsp;ゴッドパック&nbsp;を引いたことがありますか？</p>
+        <p>あなたは&nbsp;噂の&nbsp;<span id="god_font">ゴッドパック</span>&nbsp;を引いたことがありますか？</p>
         <p>そんな&nbsp;あなたへ</p>
         <p>ご用意&nbsp;いたしました</p>
     </div>
