@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Poké&nbsp;Poke&emsp;歓喜のち虚無</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hue.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,12 +32,18 @@
     </div>
     
     <div class="pack_img">
-
+        
         <!-- ピカチュウパック -->
         <div id="pika_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="pika">
-                    <img src="pack_images/pika_pack.jpg" alt="ピカチュウ パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                    <div class="hover_wrapper">
+                        <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                            <img src="pack_images/pika_pack.jpg" alt="ピカチュウ パック" class="pack_image">
+                            <div class="shine"></div>
+                        </div>
+                    </div>
                 </button>
             </form>
 
@@ -54,7 +60,13 @@
         <div id="riz_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="riz">
-                    <img src="pack_images/riz_pack.jpg" alt="リザードン パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/riz_pack.jpg" alt="リザードン パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -70,7 +82,13 @@
         <div id="myu2_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="myu2">
-                    <img src="pack_images/myu2_pack.jpg" alt="ミュウツー パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/myu2_pack.jpg" alt="ミュウツー パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -86,7 +104,13 @@
         <div id="myu_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="myu">
-                    <img src="pack_images/myu_pack.jpg" alt="ミュウ パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/myu_pack.jpg" alt="ミュウ パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -102,7 +126,13 @@
         <div id="dia_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="dhia">
-                    <img src="pack_images/dia_pack.jpg" alt="ディアルガ パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/dia_pack.jpg" alt="ディアルガ パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -118,7 +148,13 @@
         <div id="pal_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="pal">
-                    <img src="pack_images/pal_pack.jpg" alt="パルキア パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/pal_pack.jpg" alt="パルキア パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -134,7 +170,13 @@
         <div id="al_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="al">
-                    <img src="pack_images/al_pack.jpg" alt="アルセウス パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/al_pack.jpg" alt="アルセウス パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">
@@ -150,7 +192,13 @@
         <div id="sha_pack">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="shai">
-                    <img src="pack_images/shai_pack.jpg" alt="シャイニングハイ パック">
+                <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
+                <div class="hover_wrapper">
+                    <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
+                        <img src="pack_images/shai_pack.jpg" alt="シャイニングハイ パック" class="pack_image">
+                        <div class="shine"></div>
+                        </div>
+                </div>
                 </button>
             </form>
             <form action="SelectPackGet.php" method="post">

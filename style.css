@@ -7,27 +7,40 @@ body {
     -moz-user-select: none;    /* Firefox用 */
     -ms-user-select: none;     /* IE/Edge用 */
     background: #CCCCCC;
+    margin: 0;
 
-    /* background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); */
-    background-size: 2000px 850px;
-
-    /* background-image: -webkit-radial-gradient(50% 150%, #787B7D 5%, #4B5052 100%);
-    background-image: radial-gradient(50% 150%, #787B7D 5%, #4B5052 100%); */
-
-    background-image: -webkit-linear-gradient(right, #596164 1%, #868F96 99%);
-    background-image: linear-gradient(-90deg, #596164 1%, #868F96 99%);
-
-    /* background: -webkit-linear-gradient(top right, #E2E8E6 0%, #CDD3CD 100%), -webkit-linear-gradient(right, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%);
-    background: linear-gradient(to bottom left, #E2E8E6 0%, #CDD3CD 100%), linear-gradient(to left, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.12) 100%);
-    background-blend-mode: screen;   */
-
-    /* font-family: "Potta One", system-ui; */
     /* font-family: "Hachi Maru Pop", cursive; */
-
     font-family: "Zen Maru Gothic", serif;
     font-weight: 400;
     font-style: normal;
+
+    /* 高級シルバー */
+    /* background-image: -webkit-linear-gradient(right, #596164 1%, #868F96 99%);
+    background-image: linear-gradient(-90deg, #596164 1%, #868F96 99%); */
+
+    /* 宇宙 *//* 紫×黒グラデーション */
+    background: linear-gradient(120deg, #1f1c2c, #928dab); 
+    min-height: 100vh;
+    height: 100vh;
+    background-size: 300% 300%;
+    animation: gradientMove 7s ease infinite;
+
+    /* パステル */
+    /* background: linear-gradient(270deg, #e0c3fc, #8ec5fc, #a9f1df, #ffbbec, #e0c3fc);
+    background-size: 1000% 1000%;
+    animation: gradientMove 10s ease infinite; */
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes textGradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* ロゴ */
@@ -76,7 +89,7 @@ span#god_font {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: shine 3s infinite linear;
+    animation: shine 3.5s infinite linear;
 }
     
 @keyframes shine {
@@ -95,6 +108,13 @@ sectuin#main div#message {
 section#main div#message p {
     text-align: center;
     font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(270deg, #000000, #ffffff);
+    background-size: 400% 400%;
+    animation: textGradientMove 7s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* パックの画像 */
@@ -104,6 +124,7 @@ form {
     padding: 0;
     border: none;
     background: none;
+    overflow: visible !important; /* ←ここ追加！ */
 }
 
 button {
@@ -113,6 +134,7 @@ button {
     background: none;
     cursor: pointer;
     display: inline-block;
+    overflow: visible !important; /* ←ここ追加！ */
 }
 
 .pack_img {
@@ -122,13 +144,65 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* パック同士の間隔 */
+    gap: 10px; /* パック同士の間隔 */
     background: none;
     border: none;
     padding: 0;
     margin: 180px 0 0 0;
     cursor: pointer;
 }
+
+/* ① hover用ラッパー：overflow visible にする */
+.hover_wrapper {
+    display: inline-block;
+    overflow: visible;
+}
+  
+/* ② glow wrapper：shine用。overflow hidden に戻す！ */
+.glow_wrapper {
+    position: relative;
+    width: 170px;
+    overflow: hidden;
+}
+
+.hover_wrapper:hover .pack_image {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 0 50px white;
+}
+  
+.shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    animation: shineAnim 5s infinite;
+    animation-delay: var(--shine-delay, 0s);
+    animation-fill-mode: backwards;
+    opacity: 0;
+    pointer-events: none;
+}
+    
+@keyframes shineAnim {
+    0% {
+      transform: translate(-100%, -100%) rotate(25deg);
+      opacity: 0;
+    }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% {
+        transform: translate(100%, 100%) rotate(25deg);
+        opacity: 0;
+    }
+  }
 
 #pika_pack,
 #riz_pack,
@@ -145,6 +219,9 @@ button {
     margin: 0 1px 0 0;
     display: inline-block;
     cursor: pointer;
+    position: relative; /* ← 必須 */
+    overflow: visible !important; /* ← これで切られないようにする */
+    z-index: 10;
 }
 
 #pika_pack img,
@@ -156,13 +233,17 @@ button {
 #al_pack img,
 #sha_pack img
 {
-    width: 170px;
+    /* width: 170px;
     display: block;
     border: none;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease; */
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-#pika_pack img:hover,
+/* #pika_pack img:hover,
 #riz_pack img:hover,
 #myu2_pack img:hover,
 #myu_pack img:hover,
@@ -174,7 +255,8 @@ button {
     transform:scale( 1.1, 1.1 );
     transition: all .3s;
     box-shadow: 0 0 50px white;
-}
+    z-index: 1;
+} */
 
 /* ボタン共通 */
 
@@ -229,6 +311,8 @@ button {
     transform: scale(1.05);
     color: #000;
 }
+
+/* かみなり */
 
 /* .pika_button::after,
 .riz_button::after,
@@ -369,11 +453,15 @@ button {
 }
 
 .more_button {
-    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    /* background-image: linear-gradient(145deg, white, silver, black, gold, white);
     box-shadow: 0 0 50px black;
-    border: 2px solid gray;
+    border: 2px solid gray; */
     width: 150px;
     height: 70px;
+    background: linear-gradient(145deg, #111, #222, #000);
+    color: #eee;
+    border: 2px solid #444;
+    box-shadow: 0 0 15px #999, 0 0 30px #555 inset;
 }
 
 .more_button span, .top_button span {
@@ -387,10 +475,14 @@ button {
 /* 「TOP」ボタン */
 
 .top_button {
-    background-image: linear-gradient(145deg, black, silver, white, gold, black );
+    /* background-image: linear-gradient(145deg, black, silver, white, gold, black );
     width: 150px;
     height: 70px;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black; */
+    background: linear-gradient(145deg, #fff, #f4f4f4, #ddd);
+    color: #333;
+    border: 2px solid #aaa;
+    box-shadow: 0 0 15px #ccc, 0 0 25px white inset;
 }
 
 /* 開封パック */
@@ -413,9 +505,16 @@ button {
 /* 開封パック名 */
 
 .pack-title {
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 10px;
     font-weight: bold;
+    text-align: center;
+    background: linear-gradient(270deg, #000000, #ffffff);
+    background-size: 400% 400%;
+    animation: textGradientMove 7s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* カード */
@@ -472,6 +571,34 @@ footer p {
     color: #000000;
 }
 
+/* カード名 */
+
+#card_text_area {
+    margin-top: 55px;
+    height: 6.5em; /* 必要に応じて調整してね */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#card_name {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    background: linear-gradient(270deg, #000000, #ffffff);
+    background-size: 400% 400%;
+    animation: textGradientMove 7s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#rare_symbol {
+    margin: 0;
+    text-align: center;
+}
+
 /* レア度 */
 
 .rare-8 { color: gold;letter-spacing: 0.2em; text-shadow: none; filter: drop-shadow(0 0 8px gold); }
@@ -483,6 +610,10 @@ footer p {
 .rare-2 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
 .rare-1 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
 
+
+
+
+
 /* GODエフェクト 白*/
 
 .lightning-effect {
@@ -493,7 +624,7 @@ footer p {
     height: 100vh;
     background: rgba(255, 255, 255, 0.7);
     z-index: 9999;
-    animation: flash 0.3s ease-in-out 3;
+    animation: flash 0.3s ease-in-out 2;
     pointer-events: none;
 }
 
@@ -503,6 +634,9 @@ footer p {
     100% { opacity: 0; }
 }
 
+/* モーダル */
+
+/* 閉じるボタン */
 .modal {
     display: none; /* 最初は隠す */
     position: fixed;
@@ -520,11 +654,20 @@ footer p {
 
 /* モーダル内の画像 */
 .modal-content {
+    opacity: 0; /* 透明スタート */
+    transform: scale(0.9); /* 少し小さくスタート */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* フェードと拡大をなめらかに */
     width: auto;
     height: 70vh;
     max-width: 90vw;
     object-fit: contain;
     border-radius: 10px;
+}
+
+/* モーダルが表示されたらフェードイン */
+.modal.show .modal-content {
+    opacity: 1;
+    transform: scale(1); /* 通常サイズへ拡大 */
 }
 
 /* 閉じるボタン */

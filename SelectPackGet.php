@@ -43,7 +43,7 @@
 
             if ( $pack === 'all_god' && $mode === 'god' ) {
                 $cards = $selector -> selectAllGodPack (  );
-                $packDisplay = 'GOD';
+                $packDisplay = 'オール ゴッド';
             } else if ( $mode === 'god' ) {
                 $cards = $selector -> selectGodPack ( $pack );
                 $packDisplay = ( $packNames [ $pack ] ?? $pack );
@@ -112,8 +112,10 @@
                     if ( $data ): ?>
                         <div class="card_image">
                             <img src="<?= htmlspecialchars ( $data [ 'image' ] ) ?>" alt="<?= htmlspecialchars ( $data [ 'name' ] ) ?>">
-                            <p><?= htmlspecialchars ( $data [ 'name' ] ) ?></p>
-                            <p id="rare_symbol"><?= $data [ 'rare_symbol' ] ?></p>
+                            <div id="card_text_area">
+                                <p id="card_name"><?= htmlspecialchars ( $data [ 'name' ] ) ?></p>
+                                <p id="rare_symbol"><?= $data [ 'rare_symbol' ] ?></p>
+                            </div>
                         </div>
         <?php else: ?>
                         <div>
@@ -126,8 +128,8 @@
             <div id="two_button">
                 <div class="center-more-button">
                     <form action="SelectPackGet.php" method="post">
-                        <input type="hidden" name="pack" value="<?= htmlspecialchars($pack) ?>">
-                        <?php if ($mode === 'god'): ?>
+                        <input type="hidden" name="pack" value="<?= htmlspecialchars ( $pack ) ?>">
+                        <?php if ( $mode === 'god' ): ?>
                             <input type="hidden" name="mode" value="god">
                         <?php endif; ?>
                         <button type="submit" class="more_button">
@@ -198,22 +200,33 @@
 
             cardImages.forEach(img => {
                 img.addEventListener("click", function() {
-                    modal.style.display = "flex"; // モーダルを表示
-                    modalImg.src = this.src; // 押した画像のsrcをモーダルにセット
+                    modalImg.src = this.src;
+                    modal.style.display = "flex";
+
+                    requestAnimationFrame(() => {
+                        modal.classList.add("show"); // ←ここだけ！
+                    });
                 });
             });
 
-            closeBtn.addEventListener("click", function() {
-                modal.style.display = "none"; // モーダルを閉じる
-            });
-
-            modal.addEventListener("click", function(e) {
-                if (e.target === modal) { // モーダルの背景をクリックしても閉じる
+            function closeModal() {
+                modal.classList.remove("show");
+                setTimeout(() => {
                     modal.style.display = "none";
+                }, 500); // フェード時間に合わせて
+            }
+
+            closeBtn.addEventListener("click", closeModal);
+            modal.addEventListener("click", function(e) {
+                if (e.target === modal) {
+                    closeModal();
                 }
             });
-        });
 
+            // 初期化
+            modal.classList.remove('show');
+            modal.style.display = "none";
+        });
     </script>
 
         <!-- モーダル本体 -->
