@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="center-top-button">
-                    <a href="index.php" class="roop">
+                    <a href="pokepoke.php" class="roop">
                         <button class="top_button">
                             <span>TOP</span>
                         </button>
