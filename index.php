@@ -35,6 +35,7 @@
         
         <!-- ピカチュウパック -->
         <div id="pika_pack">
+        <div class="pack_wrapper">
             <form action="SelectPackGet.php" method='post'>
                 <button type="submit" name="pack" value="pika">
                 <?php $delay = rand(10, 100) / 10; // 0.0〜5.0秒 ?>
@@ -46,6 +47,8 @@
                     </div>
                 </button>
             </form>
+            <div class="shine_layer"></div> <!-- ← shineは画像と重ねる -->
+        </div>
 
             <form action="SelectPackGet.php" method="post">
                 <input type="hidden" name="pack" value="pika">

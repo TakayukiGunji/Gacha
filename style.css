@@ -143,35 +143,47 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 10px; /* パック同士の間隔 */
     background: none;
     border: none;
     padding: 0;
     margin: 180px 0 0 0;
     cursor: pointer;
+    overflow: visible !important; /* ★これが最後のピース！ */
 }
 
-/* ① hover用ラッパー：overflow visible にする */
+/* 拡大対象 */
+.pack_image {
+    width: 170px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    position: relative;
+    z-index: 10;
+  }
+
+/* 拡大用ラッパー：はみ出し許可 */
 .hover_wrapper {
     display: inline-block;
     overflow: visible;
-}
-  
-/* ② glow wrapper：shine用。overflow hidden に戻す！ */
-.glow_wrapper {
     position: relative;
-    width: 170px;
-    overflow: hidden;
-}
+    z-index: 0;
+  }
 
-.hover_wrapper:hover .pack_image {
-    transform: scale(1.1);
-    z-index: 1;
+.hover_wrapper:hover {
+    z-index: 9999;
+  }
+
+  /* 拡大時に最前面へ */
+  .hover_wrapper:hover .pack_image {
+    transform: scale(1.2);
+    z-index: 9999;
     box-shadow: 0 0 50px white;
 }
   
-.shine {
+/* .shine {
     position: absolute;
     top: -50%;
     left: -50%;
@@ -189,9 +201,9 @@ button {
     animation-fill-mode: backwards;
     opacity: 0;
     pointer-events: none;
-}
+} */
     
-@keyframes shineAnim {
+/* @keyframes shineAnim {
     0% {
       transform: translate(-100%, -100%) rotate(25deg);
       opacity: 0;
@@ -202,7 +214,7 @@ button {
         transform: translate(100%, 100%) rotate(25deg);
         opacity: 0;
     }
-  }
+  } */
 
 #pika_pack,
 #riz_pack,
@@ -223,40 +235,6 @@ button {
     overflow: visible !important; /* ← これで切られないようにする */
     z-index: 10;
 }
-
-#pika_pack img,
-#riz_pack img,
-#myu2_pack img,
-#myu_pack img,
-#dia_pack img,
-#pal_pack img,
-#al_pack img,
-#sha_pack img
-{
-    /* width: 170px;
-    display: block;
-    border: none;
-    transition: transform 0.3s ease; */
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-/* #pika_pack img:hover,
-#riz_pack img:hover,
-#myu2_pack img:hover,
-#myu_pack img:hover,
-#dia_pack img:hover,
-#pal_pack img:hover,
-#al_pack img:hover,
-#sha_pack img:hover
-{
-    transform:scale( 1.1, 1.1 );
-    transition: all .3s;
-    box-shadow: 0 0 50px white;
-    z-index: 1;
-} */
 
 /* ボタン共通 */
 
