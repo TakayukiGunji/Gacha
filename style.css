@@ -161,25 +161,24 @@ button {
     transition: transform 0.3s ease;
     will-change: transform;
     position: relative;
-    z-index: 10;
+    z-index: 0;
   }
 
-/* 拡大用ラッパー：はみ出し許可 */
-.hover_wrapper {
+  .hover_wrapper {
     display: inline-block;
     overflow: visible;
     position: relative;
     z-index: 0;
-  }
+}
 
+/* 拡大時にラッパー全体を最前面に */
 .hover_wrapper:hover {
     z-index: 9999;
-  }
+}
 
-  /* 拡大時に最前面へ */
-  .hover_wrapper:hover .pack_image {
-    transform: scale(1.2);
-    z-index: 9999;
+/* 拡大アニメーション */
+.hover_wrapper:hover .pack_image {
+    transform: scale(1.1);
     box-shadow: 0 0 50px white;
 }
   

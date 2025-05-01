@@ -42,7 +42,6 @@
                     <div class="hover_wrapper">
                         <div class="glow_wrapper" style="--shine-delay: <?= $delay ?>s;">
                             <img src="pack_images/pika_pack.jpg" alt="ピカチュウ パック" class="pack_image">
-                            <div class="shine"></div>
                         </div>
                     </div>
                 </button>
