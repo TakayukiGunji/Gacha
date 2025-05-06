@@ -1,0 +1,834 @@
+@charset "utf-8";
+
+body {
+    background: #CCCCCC;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-size: 2000px 950px;
+    /* font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;       */
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body section#main {
+    margin: 20px auto 0 auto;
+    padding-bottom: 150px;
+    height: auto;
+}
+
+#kyomu h1 {
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 40px;
+}
+
+#kyomu span {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* パックの画像 */
+
+form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#pack_img {
+    display: flex;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#pika_pack, #riz_pack, #myu2_pack, #myu_pack, #dia_pack, #pal_pack, #al_pack, #sha_pack {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 1px 0 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#pika_pack img, #riz_pack img, #myu2_pack img, #myu_pack img, #dia_pack img, #pal_pack img, #al_pack img, #sha_pack img {
+    width: 170px;
+    display: block;
+    border: none;
+    transition: transform 0.3s;
+}
+
+#pika_pack img:hover, #riz_pack img:hover, #myu2_pack img:hover, #myu_pack img:hover, #dia_pack img:hover, #pal_pack img:hover, #al_pack img:hover, #sha_pack img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+/* ピカチュウパックボタン */
+
+.pika_button {
+    font-size: 22px;
+    margin: 60px auto auto auto;
+    padding: 0.8rem 3rem;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cccccc;
+    border-radius: 40px;
+    background: linear-gradient(145deg, white, red, black, yellow, blue);
+    color: #333;
+    font-weight: bold;
+    font-family: "Hachi Maru Pop", cursive;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 20px silver;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+/* .pika_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, red, black, yellow, blue);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive; 
+} */
+
+/* .pika_button:active, .pika_button:hover {
+    outline: 0;
+} */
+
+.pika_button:hover {
+    background: linear-gradient(145deg, white, red, black, yellow, blue);
+    box-shadow: 0 0 30px white, 0 0 10px silver;
+    transform: scale(1.05);
+    color: #000;
+}
+
+/* .pika_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    width: 38px;
+    height: 100%;
+    padding: 0.5rem 1.5rem;
+    border-radius: 35px;
+    transition: 300ms;
+    display: inline-block;
+} */
+
+.pika_button::after {
+    content: "⭐️";
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 28px;
+    animation: blink 0.8s infinite alternate;
+}
+
+/* .pika_button:hover span {
+    background: none;
+    color: white;
+} */
+
+/* リザードンパックボタン */
+
+.riz_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, grey, red, orange, blue);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.riz_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.riz_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.riz_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ミュウツーパックボタン */
+
+.myu2_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, grey, violet, pink, blue);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.myu2_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.myu2_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.myu2_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ミュウパックボタン */
+
+.myu_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, skyblue, violet, pink, white, green);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.myu_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.myu_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.myu_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ディアルガパックボタン */
+
+.dia_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, rgb(48, 48, 117), rgb(9, 9, 61), silver, grey);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.dia_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.dia_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.dia_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* パルキアパックボタン */
+
+.pal_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, rgb(240, 89, 89), rgb(228, 140, 155), silver, grey);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.pal_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.pal_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.pal_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* アルセウスパックボタン */
+
+.al_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, black, yellow, rgb(4, 4, 63), orange, orange);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.al_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.al_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.al_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* シャイニングハイパックボタン */
+
+.shai_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient( 145deg, yellowgreen, lightgreen, rgb(48, 221, 234), silver, white );
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.shai_button:active, .riz_button:hover {
+    outline: 0;
+}
+
+.shai_button span {
+    background-image: linear-gradient( rgb( 55, 50, 50 ), black, black );
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+.shai_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* 「ALL PACK」ボタン */
+
+button.all_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.all_button:active, button.all_button:hover {
+    outline: 0;
+}
+
+button.all_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.all_button:hover span {
+    background: none;
+    color: white;
+}
+
+/* ALL GOD ボタン */
+
+.center-god-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button.god_button {
+    font-size: 22px;
+    margin: 60px auto auto auto;
+    padding: 0.8rem 3rem;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #d4af37;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #fffbe6, #ffd700, #ffcc00, #b8860b);
+    color: #3c2f00;
+    font-weight: bold;
+    font-family: "Hachi Maru Pop", cursive;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 20px gold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+button.god_button:hover {
+    background: linear-gradient(145deg, #fff, #f9d423, #ffcc00, #c5a600);
+    box-shadow: 0 0 30px gold, 0 0 10px yellow;
+    transform: scale(1.05);
+    color: #000;
+}
+
+button.god_button::after {
+    content: "⚡";
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 28px;
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 0.2; transform: rotate(0deg) scale(1); }
+    100% { opacity: 1; transform: rotate(10deg) scale(1.2); }
+}
+
+/* button.all_god_button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+} */
+
+/* button.all_god_button:active, button.all_god_button:hover {
+    outline: 0;
+}
+
+button.all_god_button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+    font-family: "Hachi Maru Pop", cursive;
+} */
+
+/* button.all_god_button:hover span {
+    background: none;
+    color: white;
+} */
+
+/* もう1回 ボタン */
+
+button.button {
+    font-size: 20px;
+    margin: 50px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, white, silver, black, gold, white);
+    border: 0;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.button:active, button.button:hover {
+    outline: 0;
+}
+
+button.button span {
+    background-image: linear-gradient(rgb(55, 50, 50), black, black);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+button.button:hover span {
+    background: none;
+    color: white;
+}
+
+/* 「TOP」ボタン */
+
+a.roop {
+    font-size: 20px;
+    margin: 30px auto auto auto;
+    width: 170px;
+    padding: 3px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(145deg, black, silver, white, gold, black );
+    border: 0;
+    border-radius: 40px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+a.roop:active, a.roop:hover {
+    outline: 0;
+}
+
+a.roop span {
+    background: white;
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    width: 41px;
+    height: 100%;
+    transition: 300ms;
+}
+
+a.roop:hover span {
+    background: none;
+    color: black;
+}
+
+/* カード */
+
+div#img {
+    text-align: center;
+    margin-left: 40px;
+}
+
+div#img img {
+    width: 180px;
+    border: solid 1px;
+    border-radius: 10px;
+    margin: 100px 40px 0 0;
+}
+
+div#img img:hover {
+    transform:scale( 1.1, 1.1 );
+    transition: all .3s;
+}
+
+/* コピーライト */
+
+footer {
+    display: block;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+/* レア度 */
+
+.rare {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+span.rare {
+    -webkit-text-stroke: 1px black;
+    text-shadow: 
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.rare-8 { color: gold;letter-spacing: 0.2em; }
+.rare-7 { color: yellow; letter-spacing: 0.2em; }
+.rare-6 { color: yellow; letter-spacing: 0.2em; }
+.rare-5 { color: yellow; letter-spacing: 0.2em; }
+.rare-4 { color: white; letter-spacing: 0.2em; }
+.rare-3 { color: white; letter-spacing: 0.2em; }
+.rare-2 { color: white; letter-spacing: 0.2em; }
+.rare-1 { color: white; letter-spacing: 0.2em; }
+
+body section#main p.pack-title {
+    font-size: 40px;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* GODエフェクト 白*/
+
+.lightning-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    animation: flash 0.3s ease-in-out 3;
+    pointer-events: none;
+}
+
+@keyframes flash {
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* GODエフェクト キラ*/
+
+.sparkle-effect {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:radial-gradient(white 2px, transparent 2px), radial-gradient(yellow 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: sparkle 1.2s ease-in-out forwards;
+    z-index: 10000; /* 9998 → 10000 へUP！ */
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: translateY(-50px); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(100px); }
+}
+
+/* 🌈 虹の光が横に走るエフェクト */
+/* .rainbow-run {
+    position: fixed;
+    top: 50%;
+    left: -200px;
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    animation: rainbow-move 1.2s ease-out forwards;
+    z-index: 10001;
+    opacity: 0.8;
+}
+
+@keyframes rainbow-move {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        left: 100vw;
+        opacity: 0;
+    }
+} */

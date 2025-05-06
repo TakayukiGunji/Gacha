@@ -22,7 +22,7 @@ body {
     background: linear-gradient(120deg, #1f1c2c, #928dab); 
     min-height: 100vh;
     height: 100vh;
-    background-size: 300% 300%;
+    background-size: 300% 1000%;
     animation: gradientMove 7s ease infinite;
 
     /* パステル */
@@ -140,7 +140,6 @@ button {
 .pack_img {
     text-align: center;
     pointer-events: auto;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
@@ -153,10 +152,54 @@ button {
     overflow: visible !important; /* ★これが最後のピース！ */
 }
 
+#series {
+    display: flex;
+    gap: 100px;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    margin: 50px 30px 0 30px;
+    background-image: -webkit-linear-gradient(right, #ed1641 1%, #a8c5db 99%);
+    background-image: linear-gradient(-90deg, #d4e6e6 1%, #1c1d1e 99%);
+}
+
+.series {
+    height: 600px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: 70px;
+}
+
+.series p {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    background-image: linear-gradient(70deg, white 45%, black 50%, white 55% );
+    background-size: 500% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3.5s infinite linear;
+}
+
+.pack_name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-image: linear-gradient(70deg, white 45%, red 50%, white 55% );
+    background-size: 500% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3.5s infinite linear;
+}
+
 /* 拡大対象 */
 .pack_image {
-    width: 170px;
-    height: auto;
+    width: auto;
+    height: 350px;
     display: block;
     transition: transform 0.3s ease;
     will-change: transform;
@@ -164,7 +207,7 @@ button {
     z-index: 0;
   }
 
-  .hover_wrapper {
+.hover_wrapper {
     display: inline-block;
     overflow: visible;
     position: relative;
@@ -222,7 +265,9 @@ button {
 #dia_pack,
 #pal_pack,
 #al_pack,
-#sha_pack
+#sha_pack,
+#sol_pack,
+#luna_pack
 {
     background: none;
     border: none;
@@ -247,11 +292,13 @@ button {
 .shai_button,
 .god_button,
 .more_button,
-.top_button
+.top_button,
+.sol_button,
+.luna_button
 {
     pointer-events: auto;
     font-size: 22px;
-    margin: 60px auto auto auto;
+    margin: 60px auto 60px auto;
     padding: 0.8rem 3rem;
     align-items: center;
     text-align: center;
@@ -282,7 +329,9 @@ button {
 .shai_button:hover,
 .god_button:hover,
 .more_button:hover,
-.top_button:hover
+.top_button:hover,
+.sol_button:hover,
+.luna_button:hover
 {
     box-shadow: 0 0 30px white, 0 0 10px silver;
     transform: scale(1.05);
@@ -361,6 +410,16 @@ button {
 
 .shai_button, .shai_button:hover {
     background: linear-gradient(145deg, yellowgreen, lightgreen, rgb(48, 221, 234), silver, white);
+}
+
+/* ソルガレオ ボタン */
+.sol_button, .sol_button:hover {
+    background: linear-gradient(145deg, white, skyblue, white, silver, blue );
+}
+
+/* ルナアーラ ボタン */
+.luna_button, .luna_button:hover {
+    background: linear-gradient(145deg, purple, skyblue, rgb(59, 4, 77), yellow, blue);
 }
 
 /* ALL GOD ボタン */
@@ -536,14 +595,18 @@ div.card_image p {
 /* コピーライト */
 
 footer {
+    background: linear-gradient(270deg, #e0c3fc, #8ec5fc, #a9f1df, #ffbbec, #e0c3fc);
+    background-size: 1000% 1000%;
+    animation: gradientMove 10s ease infinite;
     display: block;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    padding-top: 20px;
     text-align: center;
+    height: 180px;
 }
 
 footer p {
-    margin: 0;
+    margin: 20px auto 0 auto;
     font-size: 15px;
     color: #000000;
 }
@@ -586,10 +649,6 @@ footer p {
 .rare-3 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
 .rare-2 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
 .rare-1 { color: white; letter-spacing: 0.2em; filter: drop-shadow(0 0 8px white); }
-
-
-
-
 
 /* GODエフェクト 白*/
 

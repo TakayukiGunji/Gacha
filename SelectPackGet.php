@@ -17,6 +17,8 @@
             'pal' => '時空の激闘 パルキア',
             'al'   => '超克の光',
             'shai'  => 'シャイニングハイ',
+            'sol' => '双天の守護者 ソルガレオ',
+            'luna' => '双天の守護者 ルナアーラ',
             'ALL'  => '全部'
         ];
 
@@ -30,6 +32,8 @@
             'pal' => 'pal_pack.jpg',
             'al' => 'al_pack.jpg',
             'shai' => 'shai_pack.jpg',
+            'sol' => 'sol_pack.png',
+            'luna' => 'luna_pack.png',
             'all_god' => 'All_God_pack.jpg'
         ];
 

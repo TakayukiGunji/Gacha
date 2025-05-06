@@ -165,7 +165,6 @@
                 if ( count ( $cards ) === 0) {
                     return null;
                 }
-
                 return $cards [ array_rand ( $cards ) ];
             }
         }
