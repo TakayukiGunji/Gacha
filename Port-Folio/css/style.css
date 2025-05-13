@@ -1,0 +1,512 @@
+@charset "utf-8";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: "Kalam", cursive !important;
+    font-weight: 400;
+    font-style: normal;
+      
+/* .kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal; */
+
+    /* font-family: "Zen Maru Gothic", serif; */
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(../image/OTMS/樹氷.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#flower {
+    background-image: url(../image/OTMS/華路.jpg);
+}
+
+body header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#Introduction a {
+    font-weight: bold;
+    font-size: 60px;
+    width: 400px;
+    height: 40px;
+    margin: 20px 100px 20px 150px;
+    padding: 0;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px  1px 0 white,
+        1px  1px 0 white;
+}
+
+#introduction a:hover {
+    color: red;
+}
+
+#introduction a:visited {
+    color: white;
+}
+
+header {
+    display: flex;
+}
+
+#navlist li {
+    pointer-events: auto;
+    list-style-type: none;
+    width: 130px;
+    height: 40px;
+    margin: 50px 100px 20px 100px;
+    color: silver;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;               /* ←追加！ */
+    align-items: center;         /* ←縦中央揃え */
+    justify-content: center;     /* ←横中央揃え（必要なら） */
+}
+
+#navlist {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#navlist li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px  1px 0 white,
+        1px  1px 0 white;
+    align-items: center;
+}
+
+#navlist li a:visited {
+    color: black;
+    text-decoration: none;
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px  1px 0 white,
+        1px  1px 0 white;
+}
+
+#navlist li a:hover {
+    color: red;
+}
+
+body div #contents {
+    margin-left: 50px;
+}
+
+.flower img {
+    width: auto;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+}
+
+#main h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+#learning_book {
+    display: flex;
+}
+
+.book, #three_type {
+    margin-top: 150px;
+}
+
+.book img {
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.book article {
+    margin-left: 35px;
+}
+
+div #main {
+    margin-left: 50px;
+}
+
+#three_type {
+    margin-top: 200px;
+    margin-left: 350px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+}
+
+#three_type p {
+    font-size: 20px;
+}
+
+#three_type div ul li {
+    list-style-type: none;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#main h2 {
+    margin-top: 0;
+}
+
+#map img, #music img {
+    width: 400px;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 0;
+}
+
+div #main p span {
+    font-size: 120%;
+    font-weight: bold;
+    color: red;
+}
+
+#watch, #listen, #do {
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+#watch div img {
+    width: 300px;
+    margin-top: 0;
+}
+
+#listen div img {
+    width: 200px;
+    margin: 0 0 50px 100px;
+}
+
+#do div img {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#watch_study p {
+    font-weight: bold;
+}
+
+#listen_study p {
+    font-weight: bold;
+}
+
+#do_study p {
+    font-weight: bold;
+}
+
+#three_type div p {
+    font-weight: bold;
+}
+
+#main {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+#main h2 {
+    font-size: 40px;
+}
+
+#main p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section {
+    display: flex;
+}
+
+#main::-webkit-scrollbar {
+    display: none;
+}
+
+#learning_book, section {
+    scroll-snap-align: center;
+    height: 100vh;
+}
+
+#watch, #listen, #do {
+    padding-top: 50px;
+}
+
+#watch_methods, #listen_methods, #do_methods {
+    width: 600px;
+    margin-top: 150px;
+    margin-right: auto;
+    margin-left: 80px;
+}
+
+#main article h1#beginning {
+    margin-top: 470px;
+    margin-left: 10px;
+    color: pink;
+}
+
+#methods {
+    margin-bottom: 100px;
+}
+
+#last {
+    background-image: url(../image/OTMS/蒼華.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#last h2 {
+    margin-top: 300px;
+    margin-left: 50px;
+    font-size: 45px;
+}
+
+#japanese {
+    font-size: 70%;
+    margin-left: 680px;
+}
+
+/* JapaneseIsBeautiful */
+
+#main section p {
+    font-family: "Zen Maru Gothic", serif !important;
+    color: black;
+}
+
+#JapaneseIsBeautiful p {
+    margin: 300px auto 0 100px;
+    font-size: 150px;
+    font-family: "Zen Maru Gothic", serif !important;
+    font-style: normal;      
+}
+
+#HAPPY img {
+    margin: 300px auto 0 100px;
+    display: block;
+    block-size: 250px;
+}
+
+#English_HAPPY p {
+    margin: 250px auto 0 100px;
+    font-size: 300px;
+    font-family: "Kalam", cursive !important;
+}
+
+#GOOD img {
+    margin: 300px auto 0 100px;
+    display: block;
+    block-size: 250px;
+}
+
+#English_GOOD p {
+    margin: 250px auto 0 100px;
+    font-size: 300px;
+    font-family: "Kalam", cursive !important;
+}
+
+#oneYear img {
+    margin: 300px auto 0 100px;
+    display: block;
+    block-size: 250px;
+}
+
+#English_oneYear p {
+    margin: 250px auto 0 100px;
+    font-size: 300px;
+    font-family: "Kalam", cursive !important;
+}
+
+#PDO img {
+    margin: 300px auto 0 100px;
+    display: block;
+    block-size: 120px;
+}
+
+#English_PDO p {
+    margin: 250px auto 0 100px;
+    font-size: 140px;
+    font-family: "Kalam", cursive !important;
+}
+
+#Electroharmonix img {
+    margin: 300px auto 0 100px;
+    display: block;
+    block-size: 100px;
+}
+
+#English_Electroharmonix p {
+    margin: 250px auto 0 100px;
+    font-size: 140px;
+    font-family: "Kalam", cursive !important;
+}
+
+#エレクトロハーモニクス p {
+    margin: 250px auto 0 100px;
+    font-size: 110px;
+    font-weight: bold;
+    font-family: "Kalam", cursive !important;
+}
+
+div section#JapaneseIsBeautiful p {
+    font-family: "Yuji Mai", serif;
+    font-weight: bold;
+    font-style: normal;
+    }
+
+/* クラスメイト */
+
+#main section p {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+section#column {
+    flex-direction: column;
+}
+
+div#contents div#main section p#ken3 {
+    margin: 300px auto 0 auto;
+    font-size: 90px;
+}
+
+div#contents div#main section p#kensan {
+    margin-top: 20px;
+    margin-left: 800px;
+    font-size: 60px;
+}
+
+div#contents div#main section p#name {
+    margin: 300px auto 0 auto;
+    font-size: 90px;
+}
+
+div#contents div#main section p#nickname {
+    margin-top: 20px;
+    margin-left: 800px;
+    font-size: 60px;
+}
+
+div#contents div#main section p#first {
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    font-size: 60px;
+}
+
+div#contents div#main section p#inp {
+    margin: 20px auto 0 auto;
+    font-size: 100px;
+}
+
+div#contents div#main section p#new {
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    font-size: 60px;
+}
+
+div#contents div#main section p#newinp {
+    margin: 20px auto 0 auto;
+    font-size: 100px;
+}
+
+div#contents div#main section p#advice {
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    font-size: 60px;
+}
+
+div#contents div#main section p#comment {
+    margin: 20px auto 0 auto;
+    font-size: 90px;
+}
+
+div#contents div#main section p#subname {
+    margin: 100px 0 0 1050px;
+    font-size: 50px;
+}
+
+div#contents div#main section img {
+    margin: auto;
+    width: auto;
+    max-width: 800px;
+    max-height: 600px;
+    height: auto;
+    display: block;
+}
+
+div#contents div#main section#column p.example {
+    margin: 100px auto 0 200px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* OTMS */
+
+#long_ago {
+    font-family: "Zen Maru Gothic", serif;
+    margin: 250px auto 0 50px;
+    font-size: 40px !important;
+}
+
+#otms_list {
+    margin-top: 50px;
+}
+
+#otms_list ul li {
+    margin: 20px auto 0 400px;
+    font-size: 40px;
+    list-style-type:decimal;
+}
+
+#otms_list ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+#table, #table p {
+    margin-top: 200px;
+    margin-left: 100px;
+    font-size: 40px;
+}
+
+table {
+    margin-top: 0;
+}
+
+table tr td{
+    padding: 0 70px 0 70px;
+    text-align: center;
+}
+
+#SR400 {
+    width: 500px;
+}
